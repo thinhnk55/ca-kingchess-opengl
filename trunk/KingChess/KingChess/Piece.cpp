@@ -121,7 +121,6 @@ void Piece::drawModel()
 
 				glPushMatrix();
 				glScalef(scaleX, scaleY, scaleZ);
-				//glTranslated(0, -getHeight()*(scaleY-1)/2, 0);
 				draw();
 				glPopMatrix();
 
@@ -139,7 +138,6 @@ void Piece::drawModel()
 			glStencilMask(0x4);
 			glStencilOp(GL_KEEP, GL_KEEP, GL_INVERT);
 
-			//float fP[4] = {floorPlane[0], floorPlane[1], floorPlane[2], floorPlane[3] + mPos.y };
 			shadowMatrix(floorShadow, floorPlanePiece, Light::inst().getPosition());
 
 			glEnable(GL_BLEND);
@@ -257,7 +255,6 @@ void Piece::update()
 				mJumps.clear();
 				mDuration.clear();
 			}
-			//mState = IDLE;
 			setPosition(target);
 			mStartPos = target;
 			mTimer.start();
