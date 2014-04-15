@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="SOIL">
+      <UniqueIdentifier>{e9c2b020-b5ae-4d3f-9b59-89bb9b93150d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Classes\Controller">
+      <UniqueIdentifier>{dca0d798-0ede-4943-aeb0-134a17b9c72b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\mathlib">
+      <UniqueIdentifier>{5ef8263e-6189-4791-ab3f-78442263caa2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Sences">
+      <UniqueIdentifier>{3b864c9d-f90a-4e8d-a6d5-74e3f6de80bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Objects">
+      <UniqueIdentifier>{4b20c395-c4fb-4ab6-ae2d-ef55b1723c1e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Graphic.cpp">
+      <Filter>Classes\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelOBJ.cpp">
+      <Filter>Classes\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="mathlib.cpp">
+      <Filter>Classes\mathlib</Filter>
+    </ClCompile>
+    <ClCompile Include="collision.cpp">
+      <Filter>Classes\mathlib</Filter>
+    </ClCompile>
+    <ClCompile Include="SOIL\image_DXT.c">
+      <Filter>SOIL</Filter>
+    </ClCompile>
+    <ClCompile Include="SOIL\image_helper.c">
+      <Filter>SOIL</Filter>
+    </ClCompile>
+    <ClCompile Include="SOIL\SOIL.c">
+      <Filter>SOIL</Filter>
+    </ClCompile>
+    <ClCompile Include="SOIL\stb_image_aug.c">
+      <Filter>SOIL</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="GameScene.cpp">
+      <Filter>Classes\Sences</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Classes\Sences</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Classes\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="Piece.cpp">
+      <Filter>Classes\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Knife.cpp">
+      <Filter>Classes\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Shield.cpp">
+      <Filter>Classes\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite2D.cpp">
+      <Filter>Classes\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Classes\Controller</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Graphic.h">
+      <Filter>Classes\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>Classes\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelOBJ.h">
+      <Filter>Classes\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="mathlib.h">
+      <Filter>Classes\mathlib</Filter>
+    </ClInclude>
+    <ClInclude Include="collision.h">
+      <Filter>Classes\mathlib</Filter>
+    </ClInclude>
+    <ClInclude Include="SOIL\image_DXT.h">
+      <Filter>SOIL</Filter>
+    </ClInclude>
+    <ClInclude Include="SOIL\image_helper.h">
+      <Filter>SOIL</Filter>
+    </ClInclude>
+    <ClInclude Include="SOIL\SOIL.h">
+      <Filter>SOIL</Filter>
+    </ClInclude>
+    <ClInclude Include="SOIL\stb_image_aug.h">
+      <Filter>SOIL</Filter>
+    </ClInclude>
+    <ClInclude Include="SOIL\stbi_DDS_aug.h">
+      <Filter>SOIL</Filter>
+    </ClInclude>
+    <ClInclude Include="SOIL\stbi_DDS_aug_c.h">
+      <Filter>SOIL</Filter>
+    </ClInclude>
+    <ClInclude Include="Light.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSence.h">
+      <Filter>Classes\Sences</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Classes\Sences</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Classes\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Piece.h">
+      <Filter>Classes\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Knife.h">
+      <Filter>Classes\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Shield.h">
+      <Filter>Classes\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite2D.h">
+      <Filter>Classes\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>Classes\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Constants.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Models\skin.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
