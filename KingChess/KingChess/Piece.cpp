@@ -1,6 +1,5 @@
 #include "Piece.h"
 #include "Camera.h"
-#include "Constants.h"
 
 int id = 0;
 GLfloat floorPlanePiece[4] = {
