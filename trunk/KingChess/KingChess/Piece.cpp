@@ -25,7 +25,7 @@ Piece::Piece(void)
 	mState = MODEL_IDLE;
 	mArea = AREA_OUT;
 
-	mCircle = Sprite2D::create("img/circle.png");
+	mCircle = Sprite2D::create("Images/circle.png");
 	mKnife = new Knife();
 	mKnife->loadModel("Models/knife.obj");
 

@@ -80,9 +80,6 @@
     <ClCompile Include="InputManager.cpp">
       <Filter>Classes\Controller</Filter>
     </ClCompile>
-    <ClCompile Include="BoardCell.cpp">
-      <Filter>Classes\Objects</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Graphic.h">
@@ -153,9 +150,6 @@
     </ClInclude>
     <ClInclude Include="Constants.h">
       <Filter>Classes</Filter>
-    </ClInclude>
-    <ClInclude Include="BoardCell.h">
-      <Filter>Classes\Objects</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

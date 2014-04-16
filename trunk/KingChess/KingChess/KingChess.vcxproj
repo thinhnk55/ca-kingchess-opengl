@@ -78,7 +78,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BoardCell.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="collision.cpp" />
     <ClCompile Include="GameScene.cpp" />
@@ -99,7 +98,6 @@
     <ClCompile Include="Sprite2D.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BoardCell.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="collision.h" />
     <ClInclude Include="Constants.h" />
