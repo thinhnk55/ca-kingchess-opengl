@@ -1,7 +1,236 @@
-﻿Build started 4/16/2014 12:27:49 AM.
-     1>Project "F:\Work\DaiHoc\Nam3HK2\ComputerGraphics\Visual Studio\Chess\ca-kingchess-opengl\KingChess\KingChess\KingChess.vcxproj" on node 2 (Build target(s)).
+﻿Build started 4/16/2014 9:35:38 AM.
+     1>Project "F:\Work\DaiHoc\Nam3HK2\ComputerGraphics\Visual Studio\Chess\ca-kingchess-opengl\KingChess\KingChess\KingChess.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt GameScene.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Camera.cpp collision.cpp GameScene.cpp Graphic.cpp InputManager.cpp Knife.cpp main.cpp mathlib.cpp Model.cpp ModelOBJ.cpp Piece.cpp Scene.cpp Shield.cpp Sprite2D.cpp
+         Sprite2D.cpp
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\mathlib.h(769): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\sprite2d.cpp(38): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\sprite2d.cpp(39): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+         Shield.cpp
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\mathlib.h(769): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(17): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(18): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(26): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(27): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(92): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(93): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(105): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+         Scene.cpp
+         Piece.cpp
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\mathlib.h(769): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(17): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(18): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(26): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(27): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(92): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(93): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(105): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\piece.h(122): warning C4065: switch statement contains 'default' but no 'case' labels
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\piece.cpp(19): warning C4305: '=' : truncation from 'double' to 'GLfloat'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\piece.cpp(20): warning C4305: '=' : truncation from 'double' to 'GLfloat'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\piece.cpp(21): warning C4305: '=' : truncation from 'double' to 'GLfloat'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\piece.cpp(53): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\piece.cpp(54): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\piece.cpp(55): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\piece.cpp(56): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\piece.cpp(183): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\piece.cpp(184): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\piece.cpp(187): warning C4018: '<' : signed/unsigned mismatch
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\piece.cpp(190): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\piece.cpp(191): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\piece.cpp(210): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\piece.cpp(219): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\piece.cpp(231): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\piece.cpp(236): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\piece.cpp(238): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\piece.cpp(239): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\piece.cpp(240): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\piece.cpp(250): warning C4018: '>=' : signed/unsigned mismatch
+         ModelOBJ.cpp
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(164): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(808): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(813): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(817): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(311) : see declaration of 'sscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(818): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(819): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(822): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(825): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(311) : see declaration of 'sscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(827): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(828): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(831): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(834): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(311) : see declaration of 'sscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(836): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(837): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(840): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(845): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(846): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(849): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(856): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(311) : see declaration of 'sscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(935): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(944): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(948): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(311) : see declaration of 'sscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(949): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(950): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(966): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(978): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(311) : see declaration of 'sscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(980): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(981): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(1002): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(1016): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(311) : see declaration of 'sscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(1018): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(1019): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(1035): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(1049): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(311) : see declaration of 'sscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(1050): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(1051): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(1061): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(1074): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(311) : see declaration of 'sscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(1087): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(1095): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(1102): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(1120): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(1131): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(1138): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(311) : see declaration of 'sscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(1154): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(1159): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(1173): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(1181): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(1189): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(1203): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(1214): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(1218): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(1233): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(311) : see declaration of 'sscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(1239): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(311) : see declaration of 'sscanf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\modelobj.cpp(1250): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(311) : see declaration of 'sscanf'
+         Model.cpp
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\mathlib.h(769): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(17): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(18): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(26): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(27): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(92): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(93): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(105): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+         mathlib.cpp
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\mathlib.h(769): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+         main.cpp
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(17): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(18): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(26): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(27): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(92): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(93): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(105): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\mathlib.h(769): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\piece.h(122): warning C4065: switch statement contains 'default' but no 'case' labels
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\main.cpp(68): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\main.cpp(113): warning C4305: 'argument' : truncation from 'double' to 'GLclampf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\main.cpp(122): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\main.cpp(123): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\main.cpp(150): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\main.cpp(154): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\main.cpp(178): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\main.cpp(179): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\main.cpp(181): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\main.cpp(236): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\main.cpp(238): warning C4244: 'argument' : conversion from 'const float' to 'unsigned int', possible loss of data
+         Knife.cpp
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\mathlib.h(769): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(17): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(18): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(26): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(27): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(92): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(93): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(105): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+         InputManager.cpp
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(17): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(18): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(26): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(27): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(92): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(93): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(105): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\mathlib.h(769): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\piece.h(122): warning C4065: switch statement contains 'default' but no 'case' labels
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\inputmanager.cpp(23): warning C4065: switch statement contains 'default' but no 'case' labels
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\inputmanager.cpp(46): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\inputmanager.cpp(74): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\inputmanager.cpp(83): warning C4244: 'argument' : conversion from 'int' to 'float', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\inputmanager.cpp(93): warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
+         Graphic.cpp
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\mathlib.h(769): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(17): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(18): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(26): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(27): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(92): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(93): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(105): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
          GameScene.cpp
      1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\mathlib.h(769): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
@@ -13,11 +242,67 @@
      1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(93): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
      1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\light.h(105): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
      1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\piece.h(122): warning C4065: switch statement contains 'default' but no 'case' labels
-     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\gamescene.cpp(6): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
-     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\gamescene.cpp(26): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\gamescene.cpp(7): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\gamescene.cpp(14): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+         collision.cpp
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\mathlib.h(769): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+         Camera.cpp
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\mathlib.h(769): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\camera.cpp(27): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\camera.cpp(29): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\camera.cpp(31): warning C4305: '=' : truncation from 'double' to 'float'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\camera.cpp(33): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\camera.cpp(52): warning C4244: '=' : conversion from 'GLdouble' to 'float', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\camera.cpp(53): warning C4244: '=' : conversion from 'GLdouble' to 'float', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\camera.cpp(54): warning C4244: '=' : conversion from 'GLdouble' to 'float', possible loss of data
+         Generating Code...
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt SOIL\image_DXT.c SOIL\image_helper.c SOIL\SOIL.c SOIL\stb_image_aug.c
+         stb_image_aug.c
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\soil\stb_image_aug.c(177): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\soil\stb_image_aug.c(251): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\soil\stb_image_aug.c(303): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\soil\stb_image_aug.c(1557): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\soil\stb_image_aug.c(2394): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\soil\stb_image_aug.c(2709): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\soil\stb_image_aug.c(2995): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\soil\stb_image_aug.c(3209): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\soil\stb_image_aug.c(3548): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\soil\stb_image_aug.c(3644): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\soil\stbi_dds_aug_c.h(362): warning C4018: '>' : signed/unsigned mismatch
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\soil\stbi_dds_aug_c.h(366): warning C4018: '>' : signed/unsigned mismatch
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\soil\stbi_dds_aug_c.h(390): warning C4018: '<' : signed/unsigned mismatch
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\soil\stbi_dds_aug_c.h(427): warning C4018: '<' : signed/unsigned mismatch
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\soil\stbi_dds_aug_c.h(498): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+         SOIL.c
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\soil\soil.c(1719): warning C4018: '<=' : signed/unsigned mismatch
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\soil\soil.c(1729): warning C4018: '<' : signed/unsigned mismatch
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\soil\soil.c(1841): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+         image_helper.c
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\soil\image_helper.c(325): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\soil\image_helper.c(366): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\soil\image_helper.c(373): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\soil\image_helper.c(415): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\soil\image_helper.c(422): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+         image_DXT.c
+     1>f:\work\daihoc\nam3hk2\computergraphics\visual studio\chess\ca-kingchess-opengl\kingchess\kingchess\soil\image_dxt.c(92): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+         Generating Code...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Work\DaiHoc\Nam3HK2\ComputerGraphics\Visual Studio\Chess\ca-kingchess-opengl\KingChess\Debug\KingChess.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\Work\DaiHoc\Nam3HK2\ComputerGraphics\Visual Studio\Chess\ca-kingchess-opengl\KingChess\Debug\KingChess.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Work\DaiHoc\Nam3HK2\ComputerGraphics\Visual Studio\Chess\ca-kingchess-opengl\KingChess\Debug\KingChess.lib" /MACHINE:X86 Debug\BoardCell.obj
-         Debug\Camera.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"F:\Work\DaiHoc\Nam3HK2\ComputerGraphics\Visual Studio\Chess\ca-kingchess-opengl\KingChess\Debug\KingChess.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"F:\Work\DaiHoc\Nam3HK2\ComputerGraphics\Visual Studio\Chess\ca-kingchess-opengl\KingChess\Debug\KingChess.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\Work\DaiHoc\Nam3HK2\ComputerGraphics\Visual Studio\Chess\ca-kingchess-opengl\KingChess\Debug\KingChess.lib" /MACHINE:X86 Debug\Camera.obj
          Debug\collision.obj
          Debug\GameScene.obj
          Debug\Graphic.obj
@@ -36,8 +321,8 @@
          Debug\stb_image_aug.obj
          Debug\Sprite2D.obj
          KingChess.vcxproj -> F:\Work\DaiHoc\Nam3HK2\ComputerGraphics\Visual Studio\Chess\ca-kingchess-opengl\KingChess\Debug\KingChess.exe
-     1>Done Building Project "F:\Work\DaiHoc\Nam3HK2\ComputerGraphics\Visual Studio\Chess\ca-kingchess-opengl\KingChess\KingChess\KingChess.vcxproj" (Build target(s)).
+     1>Done Building Project "F:\Work\DaiHoc\Nam3HK2\ComputerGraphics\Visual Studio\Chess\ca-kingchess-opengl\KingChess\KingChess\KingChess.vcxproj" (Rebuild target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.96
+Time Elapsed 00:00:14.32
