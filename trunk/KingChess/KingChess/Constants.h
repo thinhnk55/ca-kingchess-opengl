@@ -32,10 +32,8 @@ public: virtual void set##funName(varType var){ varName = var; }
 
 enum Turn
 {
-	TURN_RED = 0,
-	TURN_BLUE,
-	TURN_GREEN,
-	TURN_YELLOW
+	TURN_WHITE = 0,
+	TURN_BLACK
 };
 
 enum MoveState

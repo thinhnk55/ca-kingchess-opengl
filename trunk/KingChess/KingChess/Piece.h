@@ -9,12 +9,12 @@
 
 class Piece;
 
+
 struct Field
 {
 	Vector3 position;
 	Piece* piece;
 	float direction; // 0, 90, 180, -90 
-
 	Field()
 	{
 		position = Vector3();
@@ -117,18 +117,6 @@ inline void Piece::setType(Turn pType)
 
 	switch (pType)
 	{
-	case TURN_RED:
-		setColorTint(0.8, 0, 0);
-		break;
-	case TURN_BLUE:
-		setColorTint(0, 0, 0.8);
-		break;
-	case TURN_GREEN:
-		setColorTint(0, 0.8, 0); 
-		break;
-	case TURN_YELLOW:
-		setColorTint(0.8, 0.8, 0);
-		break;
 	default:
 		break;
 	}

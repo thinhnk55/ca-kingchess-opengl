@@ -71,7 +71,7 @@ int initGLUT(int argc, char **argv)
 	// finally, create a window with openGL context
 	// Window will not displayed until glutMainLoop() is called
 	// it returns a unique ID
-	int handle = glutCreateWindow("Assignment - 08. Co Ca Ngua");     // param is the title of window
+	int handle = glutCreateWindow("Assignment - CG. Co Vua");     // param is the title of window
 
 	// register GLUT callback functions
 	glutDisplayFunc(displayCB);
