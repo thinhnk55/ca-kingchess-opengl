@@ -102,7 +102,7 @@ public:
 		/* Draw a white line from light direction. */
 		glColor3f(1.0, 1.0, 1.0);
 		glBegin(GL_LINES);
-		glVertex3f(0.1, 0, 0);
+		glVertex3f(0, 0, 0);
 		glVertex3f(5, 0, 0);
 		glEnd();
 		glEnable(GL_CULL_FACE);

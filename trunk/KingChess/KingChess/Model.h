@@ -55,6 +55,10 @@ public:
 	virtual void drawModel();
 	virtual void update();
 
+	float originalWidth;
+	float originalHeight;
+	float originalLength;
+
 	BoundingBox boundingbox();
 
 	bool wait(float sec);

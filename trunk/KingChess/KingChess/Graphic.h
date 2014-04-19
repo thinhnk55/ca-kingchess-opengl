@@ -8,6 +8,7 @@ class Graphic
 {
 	GLSYNTHESIZE(AppScene, mAppScene, AppScene);
 public:
+	float zoomFactor;
 	float screenWidth, screenHeight;
 	float near_height;
 	float zNear, zFar;

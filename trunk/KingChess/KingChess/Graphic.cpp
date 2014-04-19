@@ -6,6 +6,7 @@ Graphic::Graphic(void)
 	near_height = 0.5;
 	zNear = 1;
 	zFar = 1000;
+	zoomFactor = 0.5;
 }
 
 Graphic& Graphic::inst()

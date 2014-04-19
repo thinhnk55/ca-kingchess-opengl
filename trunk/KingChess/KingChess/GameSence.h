@@ -23,7 +23,7 @@ public:
 	float mUserViewAngle;
 	float mouse_x;
 	float mouse_y;
-	Piece* tmpPi;
+	Knife* tmpPi;
 
 	void initPiece();
 	void drawSence();

@@ -20,6 +20,7 @@ public:
 	Vector3 eye;
 	Vector3 at;
 	Vector3 up;
+
 	float theta;
 	float phi;
 	float R;

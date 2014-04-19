@@ -37,6 +37,8 @@ float color[4] = {1,1,1,1};
 void* font = GLUT_BITMAP_HELVETICA_18;
 double currentTime = 0;
 
+GLfloat zoomX = 1.0, zoomY = 1.0, zoomZ = 1.0;
+
 ///////////////////////////////////////////////////////////////////////////////
 // initialize global variables
 ///////////////////////////////////////////////////////////////////////////////
@@ -168,9 +170,23 @@ void showInfo(float elapse)
 void displayCB( void )  {
 
 	glStencilMask(0xffffffff);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);	
 	glClearStencil(0x4);
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
+	glPushMatrix();
+	glBegin(GL_LINES);
+	glColor3f(1, 0, 0);
+	glVertex3f(-100, 0, 0);
+	glVertex3f(100, 0, 0);
+	glColor3f(0, 1, 0);
+	glVertex3f(0, -100, 0);
+	glVertex3f(0, 100, 0);
+	glColor3f(0, 0, 1);
+	glVertex3f(0, 0, -100);
+	glVertex3f(0, 0, 100);
+	glEnd();
+	glScalef(0.4, 0.4, 0.4);
 	GameScene::inst().loop();
+	glPopMatrix();
 	glutSwapBuffers();
 }
 
@@ -229,6 +245,7 @@ void mousePassiveMotionCB(int x, int y)
 
 void keyboardCB(unsigned char key,int x,int y)
 {
+	printf("Key board %c", key );
 	KeyBoard::inst().processKey(key);
 }
 

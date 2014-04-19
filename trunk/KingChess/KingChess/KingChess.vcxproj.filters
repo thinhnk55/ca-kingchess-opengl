@@ -50,9 +50,6 @@
     <ClCompile Include="SOIL\stb_image_aug.c">
       <Filter>SOIL</Filter>
     </ClCompile>
-    <ClCompile Include="Model.cpp">
-      <Filter>Classes</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
@@ -79,6 +76,9 @@
     </ClCompile>
     <ClCompile Include="InputManager.cpp">
       <Filter>Classes\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>Classes\Objects</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
