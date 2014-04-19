@@ -113,7 +113,7 @@ public:
 	bool hasTangents() const;
 	bool hasTextureCoords() const;
 
-private:
+public:
 	void addTrianglePos(int index, int material,
 		int v0, int v1, int v2);
 	void addTrianglePosNormal(int index, int material,

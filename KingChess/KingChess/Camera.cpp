@@ -65,7 +65,6 @@ void Camera::zoom(float x){
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	gluLookAt(eye.x,eye.y,eye.z,at.x,at.y,at.z,up.x,up.y,up.z);
-	//printf("at: %f, %f, %f\n", at.x, at.y, at.z);
 }
 
 void Camera::pan(float x, float z){

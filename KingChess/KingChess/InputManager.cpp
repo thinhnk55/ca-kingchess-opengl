@@ -1,6 +1,7 @@
 #include "InputManager.h"
 #include "GameSence.h"
 #include "Constants.h"
+#include "Camera.h"
 
 
 KeyBoard::KeyBoard(void)
@@ -17,7 +18,13 @@ KeyBoard& KeyBoard::inst()
 void KeyBoard::processKey( unsigned char key )
 {
 	switch(key){
-	printf("kEY = %d", key);
+	case 'l':
+		Camera::inst().zoom(0.5);
+		printf("zoom ++\n");
+		break;
+	case 's':
+		Camera::inst().zoom(-0.5);
+		printf("zoom --\n");
 	default:
 		break;
 	}

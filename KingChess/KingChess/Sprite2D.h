@@ -43,9 +43,15 @@ public:
 	void setVisible(bool visible);
 	bool isVisible();
 
-	Rect boundingbox();
-};  
+	void scale(float factor);
 
+	Rect boundingbox();
+
+};  
+inline void Sprite2D::scale(float factor){
+	size.height = factor * size.height;
+	size.width = factor * size.width;
+}
 inline void Sprite2D::setVisible(bool visible)
 {
 	mVisible = visible;
