@@ -38,7 +38,7 @@ void GameScene::initEnties(){
 	printf("Load OBJ start \n");
 	model = new BaseModel();
 	model->loadModel("Models/pawn.obj");
-	model->setPosition(Vector3(0, 0, 0));
+	model->setPosition(Vector3(0, 8, 0));
 	model->setAngleRotate(90.0);
 	model->mShadow = true;
 	model->mSelected = true;
