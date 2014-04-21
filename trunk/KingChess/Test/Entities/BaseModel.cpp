@@ -93,7 +93,7 @@ void BaseModel::drawModel(){
 			if (mDrawKnife)
 			{
 				glPushMatrix();
-				glTranslatef(mAnchor.x*getWidth(), mAnchor.y*getHeight() + getHeight()*1.5, mAnchor.z*getLength());
+				glTranslatef(mAnchor.x*getWidth(), mAnchor.y*getHeight() + getHeight()*1.8, mAnchor.z*getLength());
 				glScalef(2, 2, 2);
 				mKnife->setAngleRotate(circleAngle);
 				mKnife->drawModel();
@@ -103,7 +103,7 @@ void BaseModel::drawModel(){
 			if (mDrawShield)
 			{
 				glPushMatrix();
-				glTranslatef(mAnchor.x*getWidth(), mAnchor.y*getHeight() + getHeight()*1.5, mAnchor.z*getLength());
+				glTranslatef(mAnchor.x*getWidth(), mAnchor.y*getHeight() + getHeight()*1.8, mAnchor.z*getLength());
 				glScalef(2, 2, 2);
 				mShield->setAngleRotate(circleAngle);
 				mShield->drawModel();
