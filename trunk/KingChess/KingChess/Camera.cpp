@@ -1,6 +1,6 @@
 #include "Camera.h"
 
-const float Camera::Radius = 55;
+const float Camera::Radius = 175;
 const Vector3 Camera::origin = Vector3();
 
 Camera::Camera(){
@@ -8,7 +8,7 @@ Camera::Camera(){
 	up = Vector3(0.0,1.0,0.0);
 	theta = Math::PI/3;
 	phi = Math::PI/3;
-	R = 55.0;
+	R = 175;
 	eye = transf_coord();
 	zeroViewVector = Vector2(0, 1);
 };
@@ -59,8 +59,8 @@ void Camera::zoom(float x){
 	R += x;
 	if (R < 3.0)
 		R = 3.0;
-	if (R > 75.0)
-		R = 75.0;
+	if (R > 300.0)
+		R = 300.0;
 	eye = transf_coord();
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();

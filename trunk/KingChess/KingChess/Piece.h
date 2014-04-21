@@ -51,7 +51,6 @@ class Piece : public Model
 	GLSYNTHESIZE(Field, mInitPos, InitPosition);
 	GLSYNTHESIZE(Area, mArea, Area);
 
-	Sprite2D* mCircle;
 	Knife*    mKnife;
 	Shield*   mShield;
 	bool      mDrawKnife;

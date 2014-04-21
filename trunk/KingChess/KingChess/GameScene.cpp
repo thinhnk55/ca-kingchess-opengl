@@ -3,12 +3,17 @@
 
 void GameScene::initPiece(){
 	float offsets[3] = {0.0, 0.0, 0.0};
-	tmpPi = new Knife();
-	tmpPi->loadModel("Models/Board.obj");
+	tmpPi = new Piece();
+	tmpPi->loadModel("Models/knight.obj");
 	tmpPi->setAnchorPoint(Vector3(0, 0, 0));
-	tmpPi->setPosition(Vector3(0, 0, 0));
-	printf("Height = %f\n", tmpPi->getHeight());
-	printf("Height = %f\n", tmpPi->getHeight());
+	tmpPi->setPosition(Vector3(0, 4.0, 0));
+	
+
+	board = new Piece();
+	board->loadModel("Models/board.obj");
+	board->setAnchorPoint(Vector3(0, 0.0, 0));
+	board->setPosition(Vector3(0, -20.0, 0));
+	board->shadow(false);
 }
 
 GameScene::GameScene(void)
@@ -16,11 +21,11 @@ GameScene::GameScene(void)
   srand(time(NULL));
   font = GLUT_BITMAP_8_BY_13;
   lightPosition[0] = 0;
-  lightPosition[1] = 20;
+  lightPosition[1] = 25;
   lightPosition[2] = 0;
   lightPosition[3] = 0;
-  lightAngle = 90.0;
-  lightHeight = 20;
+  lightAngle = 60.0;
+  lightHeight = 25;
   initPiece();
 }
 
@@ -41,12 +46,13 @@ void GameScene::drawSence(){
 	glEnable(GL_LIGHTING);	
 	glPushMatrix();
 		tmpPi->drawModel();
+		board->drawModel();
 	glPopMatrix();
 
 	//Debug light
-	/*lightPosition[0] = 15*cos(lightAngle);
+	lightPosition[0] = 25*cos(lightAngle);
 	lightPosition[1] = lightHeight;
-	lightPosition[2] = 15*sin(lightAngle);*/
+	lightPosition[2] = 25*sin(lightAngle);
 	Light::inst().setPosition(lightPosition[0], lightPosition[1], lightPosition[2], lightPosition[3]);
 	Light::inst().drawLightSource(lightAngle, lightHeight);
 
@@ -68,13 +74,9 @@ void GameScene::update()
 
 void GameScene::processMouseBegan( int x, int y )
 {
-	printf("Mouse clicked");
-	/*tmpPi->highlight(!tmpPi->isHighlight());
-	tmpPi->shadow(!tmpPi->isShadow());
-	tmpPi->selected(!tmpPi->isSelected());*/
 	int index = identifyModelClicked(x, y);
-	bool texture = tmpPi->getEnableTextures();
-	printf("enable texture: %d\n", texture);
+	tmpPi->selected(!tmpPi->isSelected());
+	tmpPi->shadow(!tmpPi->isShadow());
 }
 
 void GameScene::processMousePassiveMotion( int x, int y )
@@ -103,36 +105,17 @@ int GameScene::identifyModelClicked( int mouse_x, int mouse_y )
 
 	Matrix4 inverseModelViewMatrix = Matrix4(m).inverse();
 
-	// Calculate origin and vector of clicked-ray
-	Vector4 rayOrigin = Vector4()*inverseModelViewMatrix;
-	Vector3 rayVec = Vector3(x, y, -Graphic::inst().zNear)*inverseModelViewMatrix;
+	Vector3 rayOrigin = Camera::inst().eye;
+	Vector3 rayVec = Vector3(x, y, -Graphic::inst().zNear) * inverseModelViewMatrix;
+	mViewRay.set(rayOrigin, rayVec);
 
-	//cout << rayOrigin.toString();
-
-	mViewRay.set(rayOrigin.toVector3(), rayVec);
 	int index = -1;
-		// checking click-ray intersected with piece
+
 	if (mViewRay.hasIntersected(tmpPi->boundingbox()))
 	{
-		printf("Intersected\n");
 		index = 1;
 	}
-	return 1;
-}
-
-
-float GameScene::calcUserViewAngle( Vector3 pV )
-{
-  mAutoCam = true;
-
-  Vector2 viewVector = Vector2(pV.x, pV.z) - Vector2(Camera::inst().at.x, Camera::inst().at.z);
-  float angle = acos(Vector2::dot(viewVector, Camera::inst().zeroViewVector)/
-    (viewVector.magnitude() * Camera::inst().zeroViewVector.magnitude()));
-
-  if (viewVector.x >= 0)
-    return angle;
-  else
-    return -angle;
+	return index;
 }
 
 GameScene::~GameScene(void)

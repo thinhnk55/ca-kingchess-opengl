@@ -46,9 +46,6 @@ bool initSharedMem()
 {
 	Graphic::inst().screenWidth = SCREEN_WIDTH;
 	Graphic::inst().screenHeight = SCREEN_HEIGHT;
-
-	//Graphic::inst().setAppScene(APP_GAME);
-
 	return true;
 }
 
@@ -64,8 +61,7 @@ int initGLUT(int argc, char **argv)
 
 	glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE | GLUT_DEPTH | GLUT_STENCIL | GLUT_MULTISAMPLE);   // display mode
 
-	//   glutGameModeString("800x600:16@60");
-	//   glutEnterGameMode();
+
 
 	glutInitWindowSize(Graphic::inst().screenWidth, Graphic::inst().screenHeight);  // window size
 	glutInitWindowPosition(400, 100);               // window location
@@ -77,7 +73,7 @@ int initGLUT(int argc, char **argv)
 
 	// register GLUT callback functions
 	glutDisplayFunc(displayCB);
-	//glutTimerFunc(DELTA_TIME, timerCB, 0);             // redraw only every given millisec
+	glutTimerFunc(DELTA_TIME, timerCB, 0);             // redraw only every given millisec
 	glutReshapeFunc(reshapeCB);
 	glutIdleFunc(idleCB);
 	glutKeyboardFunc(keyboardCB);
@@ -106,11 +102,6 @@ void initGL()
 	glEnable(GL_TEXTURE_2D);
 	glEnable(GL_CULL_FACE);
 
-	//glPolygonMode( GL_FRONT_AND_BACK, GL_POINT );
-
-	// track material ambient and diffuse from surface color, call it before glEnable(GL_COLOR_MATERIAL)
-	//glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
-	//glEnable(GL_COLOR_MATERIAL);
 
 	glClearColor(0.3, 0.3, 0.3, 1);                   // background color
 	glClearStencil(0);                          // clear stencil buffer
@@ -184,7 +175,8 @@ void displayCB( void )  {
 	glVertex3f(0, 0, -100);
 	glVertex3f(0, 0, 100);
 	glEnd();
-	glScalef(0.4, 0.4, 0.4);
+
+	showInfo(mTimer.elapsed());
 	GameScene::inst().loop();
 	glPopMatrix();
 	glutSwapBuffers();
@@ -202,7 +194,7 @@ void reshapeCB(int width, int height) {
 	// set perspective viewing frustum
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	//gluPerspective(60.0f, (float)Graphic::inst().screenWidth/Graphic::inst().screenHeight, 1.0f, 1000.0f); // FOV, AspectRatio, NearClip, FarClip
+
 	glFrustum(-Graphic::inst().near_height * aspect, 
 		Graphic::inst().near_height * aspect, 
 		-Graphic::inst().near_height,
@@ -216,7 +208,7 @@ void reshapeCB(int width, int height) {
 
 	gluLookAt(Camera::inst().eye.x, Camera::inst().eye.y, Camera::inst().eye.z,
 		Camera::inst().at.x, Camera::inst().at.y, Camera::inst().at.z,
-		0, 1, 0 ); // eye(x,y,z), focal(x,y,z), up(x,y,z)
+		0, 1, 0 );
 }
 
 void idleCB()
@@ -250,9 +242,9 @@ void keyboardCB(unsigned char key,int x,int y)
 }
 
 void timerCB(int value) {
-	GameScene::inst().lightAngle+=0.3;
+	//GameScene::inst().lightAngle+=0.3;
 	glutPostRedisplay(); //Redraw scene
-	glutTimerFunc(DELTA_TIME, timerCB, 0); //Call update in 5 milliseconds
+	glutTimerFunc(DELTA_TIME, timerCB, 0); //Call update
 }
 
 int main( int argc, char *argv[] )  {
