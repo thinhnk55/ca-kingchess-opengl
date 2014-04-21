@@ -5,8 +5,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KingChess", "KingChess\King
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Test", "Test\Test.vcxproj", "{F7E481CB-5AB9-4BF5-A83E-FADFBB4B5443}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CoCaNgua", "C:\Users\Thinh\Downloads\Compressed\CoCaNgua-master\CoCaNgua\CoCaNgua\CoCaNgua.vcxproj", "{F5873F49-817A-461B-9AF6-FF02B9F2234E}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sample", "Sample\Sample.vcxproj", "{97196EBE-1E4C-45E8-8B32-D485A08EA04B}"
 EndProject
 Global
@@ -23,10 +21,6 @@ Global
 		{F7E481CB-5AB9-4BF5-A83E-FADFBB4B5443}.Debug|Win32.Build.0 = Debug|Win32
 		{F7E481CB-5AB9-4BF5-A83E-FADFBB4B5443}.Release|Win32.ActiveCfg = Release|Win32
 		{F7E481CB-5AB9-4BF5-A83E-FADFBB4B5443}.Release|Win32.Build.0 = Release|Win32
-		{F5873F49-817A-461B-9AF6-FF02B9F2234E}.Debug|Win32.ActiveCfg = Debug|Win32
-		{F5873F49-817A-461B-9AF6-FF02B9F2234E}.Debug|Win32.Build.0 = Debug|Win32
-		{F5873F49-817A-461B-9AF6-FF02B9F2234E}.Release|Win32.ActiveCfg = Release|Win32
-		{F5873F49-817A-461B-9AF6-FF02B9F2234E}.Release|Win32.Build.0 = Release|Win32
 		{97196EBE-1E4C-45E8-8B32-D485A08EA04B}.Debug|Win32.ActiveCfg = Debug|Win32
 		{97196EBE-1E4C-45E8-8B32-D485A08EA04B}.Debug|Win32.Build.0 = Debug|Win32
 		{97196EBE-1E4C-45E8-8B32-D485A08EA04B}.Release|Win32.ActiveCfg = Release|Win32
