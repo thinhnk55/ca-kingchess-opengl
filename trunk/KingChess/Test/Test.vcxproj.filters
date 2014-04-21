@@ -28,6 +28,9 @@
     <Filter Include="Source Files\Entities">
       <UniqueIdentifier>{2f655987-2b2d-474a-853e-a33a6cef308d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Sences">
+      <UniqueIdentifier>{e8baf3b2-ab05-4f3f-8d26-cadd07b8f742}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -69,9 +72,6 @@
     <ClCompile Include="Entities\BaseModel.cpp">
       <Filter>Source Files\Entities</Filter>
     </ClCompile>
-    <ClCompile Include="Sences\GameSence.cpp">
-      <Filter>Source Files\Entities</Filter>
-    </ClCompile>
     <ClCompile Include="Entities\LogicGame.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -80,6 +80,9 @@
     </ClCompile>
     <ClCompile Include="Entities\ExtraModel.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sences\GameSence.cpp">
+      <Filter>Source Files\Sences</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -128,9 +131,6 @@
     <ClInclude Include="Entities\BaseModel.h">
       <Filter>Source Files\Entities</Filter>
     </ClInclude>
-    <ClInclude Include="Sences\GameSence.h">
-      <Filter>Source Files\Entities</Filter>
-    </ClInclude>
     <ClInclude Include="Entities\Model.h">
       <Filter>Source Files\Entities</Filter>
     </ClInclude>
@@ -148,6 +148,9 @@
     </ClInclude>
     <ClInclude Include="Entities\ExtraModel.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sences\GameSence.h">
+      <Filter>Source Files\Sences</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -4,7 +4,7 @@
 #define BOARD_SIZE 8
 
 #include "../Entities/BaseModel.h"
-#include "../Entities./LogicGame.h"
+#include "../Entities/LogicGame.h"
 #include "../Entities/Sprite2D.h"
 #include "../Entities/ExtraModel.h"
 
