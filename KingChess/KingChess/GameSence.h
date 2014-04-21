@@ -23,14 +23,15 @@ public:
 	float mUserViewAngle;
 	float mouse_x;
 	float mouse_y;
-	Knife* tmpPi;
+	Piece* tmpPi;
+
+	Piece* board;
 
 	void initPiece();
 	void drawSence();
 	int getModelPositionIndex(Vector3 pPos, Field pArray[], int pSize);
 
 	int identifyModelClicked(int mouse_x, int mouse_y);
-	float calcUserViewAngle(Vector3 pV);
 
 	GLfloat lightPosition[4];
 	float lightAngle, lightHeight;

@@ -19,11 +19,11 @@ void KeyBoard::processKey( unsigned char key )
 {
 	switch(key){
 	case 'l':
-		Camera::inst().zoom(0.5);
+		Camera::inst().zoom(1.0);
 		printf("zoom ++\n");
 		break;
 	case 's':
-		Camera::inst().zoom(-0.5);
+		Camera::inst().zoom(-1.0);
 		printf("zoom --\n");
 	default:
 		break;

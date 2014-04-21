@@ -25,7 +25,6 @@ Piece::Piece(void)
 	mState = MODEL_IDLE;
 	mArea = AREA_OUT;
 
-	mCircle = Sprite2D::create("Images/circle.png");
 	mKnife = new Knife();
 	mKnife->loadModel("Models/knife.obj");
 
@@ -41,22 +40,6 @@ Piece::Piece( const Piece* other )
 void Piece::drawModel()
 {
 	Model::drawModel();
-
-	if (mSelected)
-	{
-		glColor4f(1, 1, 1, 1);
-		glPushMatrix();
-		glDisable(GL_LIGHTING);
-		glTranslatef(mPos.x, mPos.y, mPos.z);
-		glRotatef(circleAngle, 0, 1, 0);
-		float size = getWidth() > getLength() ? getWidth()/2 : getLength()/2;
-		mCircle->drawImg(Vector3( -PIECE_CIRCLE_SIZE*size, 0, -PIECE_CIRCLE_SIZE*size),
-			Vector3( -PIECE_CIRCLE_SIZE*size, 0,  PIECE_CIRCLE_SIZE*size),
-			Vector3(  PIECE_CIRCLE_SIZE*size, 0,  PIECE_CIRCLE_SIZE*size),
-			Vector3(  PIECE_CIRCLE_SIZE*size, 0, -PIECE_CIRCLE_SIZE*size));
-		glEnable(GL_LIGHTING);
-		glPopMatrix();
-	}
 
 	float x, y, z;
 	getCenter(x, y, z);
@@ -152,7 +135,6 @@ void Piece::drawModel()
 				glPushMatrix();
 				{
 					glTranslated(mPos.x, mPos.y, mPos.z);
-					//glTranslatef(0, 8.01, 0);
 					draw();
 				}
 				glPopMatrix(); 
