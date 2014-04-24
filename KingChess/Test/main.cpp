@@ -111,10 +111,10 @@ void keyboardCB(unsigned char key, int x, int y){
 	printf("Press %c % d %d\n", key, x, y);
 	switch (key)
 	{
-	case 's':
+	case 'g':
 		Camera::inst().zoom(1);
 		break;
-	case 'l':
+	case 'h':
 		Camera::inst().zoom(-1);
 		break;
 	default:
