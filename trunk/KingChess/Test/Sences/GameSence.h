@@ -27,7 +27,10 @@ public:
 	//64 cell
 	ExtraModel* allCells[BOARD_SIZE][BOARD_SIZE];
 
-	BaseModel* model;
+	BaseModel* pawnRedTempModel;
+
+    BaseModel* models[32];
+
 	BaseModel* board;
 	ExtraModel* sky;
 	ExtraModel* ground;
@@ -49,8 +52,10 @@ public:
 	void processMousePassiveMotion(int x, int y);
 	void processKeyBoard(unsigned key, int x, int y);
 
-
 	void processKeyBoard();
+    
+    int getSelectedIndex(int mouse_x, int mouse_y);
+    int prevSelected;
 };
 
 #endif // !_CG_GAME_SCENE_H_

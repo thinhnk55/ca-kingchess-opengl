@@ -1,6 +1,6 @@
 #include "GameSence.h"
 #include "../Entities/LogicGame.h"
-
+#include "../Constant.h"
 
 
 
@@ -16,6 +16,8 @@ GameScene::GameScene(void)
 	lightHeight = 20;
 
 	initEnties();
+
+    prevSelected = -1;
 }
 
 GameScene& GameScene::inst()
@@ -36,17 +38,18 @@ void GameScene::initSprites(){
 }
 void GameScene::initEnties(){
 	printf("Load OBJ start \n");
-	model = new BaseModel();
-	model->loadModel("Models/pawn.obj");
-	model->setPosition(Vector3(0, 8, 0));
-	model->setAngleRotate(90.0);
-	model->mShadow = true;
-	model->mSelected = true;
-	model->mDrawKnife = true;
-	model->mDrawShield = true;
-	model->mVisible = true;
-	printf("model Pos = (%f, %f, %f)\n", model->getPosition().x, model->getPosition().y, model->getPosition().z);
-	printf("model Anchor point = (%f, %f, %f)\n", model->getAnchorPoint().x, model->getAnchorPoint().y, model->getAnchorPoint().z);
+	pawnRedTempModel = new BaseModel();
+	pawnRedTempModel->loadModel("Models/pawn.obj");
+	pawnRedTempModel->setPosition(Vector3(0, 8, 0));
+	pawnRedTempModel->setAngleRotate(90.0);
+	//pawnRedTempModel->mShadow = true;
+	//pawnRedTempModel->mSelected = true;
+	//pawnRedTempModel->mDrawKnife = true;
+	//pawnRedTempModel->mDrawShield = true;
+	pawnRedTempModel->mVisible = true;
+    
+	printf("model Pos = (%f, %f, %f)\n", pawnRedTempModel->getPosition().x, pawnRedTempModel->getPosition().y, pawnRedTempModel->getPosition().z);
+	printf("model Anchor point = (%f, %f, %f)\n", pawnRedTempModel->getAnchorPoint().x, pawnRedTempModel->getAnchorPoint().y, pawnRedTempModel->getAnchorPoint().z);
 
 	board = new BaseModel();
 	board->loadModel("Models/Board.obj");
@@ -65,7 +68,24 @@ void GameScene::initEnties(){
 	
 	printf("Finish ground\n");
 	printf("==========END============");
-	
+
+	/*set red pawns positions*/
+    models[PAWN_RED_1] = new BaseModel(pawnRedTempModel);
+    models[PAWN_RED_1]->setPosition(Vector3(-44,8,31));
+    models[PAWN_RED_2] = new BaseModel(pawnRedTempModel);
+    models[PAWN_RED_2]->setPosition(Vector3(-31,8,31));
+    models[PAWN_RED_3] = new BaseModel(pawnRedTempModel);
+    models[PAWN_RED_3]->setPosition(Vector3(-19,8,31));
+    models[PAWN_RED_4] = new BaseModel(pawnRedTempModel);
+    models[PAWN_RED_4]->setPosition(Vector3(-6,8,31));
+    models[PAWN_RED_5] = new BaseModel(pawnRedTempModel);
+    models[PAWN_RED_5]->setPosition(Vector3(6,8,31));
+    models[PAWN_RED_6] = new BaseModel(pawnRedTempModel);
+    models[PAWN_RED_6]->setPosition(Vector3(19,8,31));
+    models[PAWN_RED_7] = new BaseModel(pawnRedTempModel);
+    models[PAWN_RED_7]->setPosition(Vector3(31,8,31));
+    models[PAWN_RED_8] = new BaseModel(pawnRedTempModel);
+    models[PAWN_RED_8]->setPosition(Vector3(44,8,31));
 }
 
 void GameScene::initSky(){
@@ -101,7 +121,10 @@ void GameScene::drawSence(){
 	//ground->drawModel();
 	
 
-	model->drawModel();
+	pawnRedTempModel->drawModel();
+    for(int i = 0 ; i < 8 ; i++){
+        models[i] ->drawModel();
+    }
 	board->drawModel();
 
 	//drawCells();
@@ -137,38 +160,38 @@ void GameScene::processMouseEnded(int x, int y){
 void GameScene::processKeyBoard(unsigned key, int x, int y){
 	switch (key)
 	{
-	case 'a':
-		model->moveDown(1);
-		printf("model Pos = (%f, %f, %f)\n", model->getPosition().x, model->getPosition().y, model->getPosition().z);
-		printf("model Anchor point = (%f, %f, %f)\n", model->getAnchorPoint().x, model->getAnchorPoint().y, model->getAnchorPoint().z);
+	case 'x':
+		pawnRedTempModel->moveDown(1);
+		printf("model Pos = (%f, %f, %f)\n", pawnRedTempModel->getPosition().x, pawnRedTempModel->getPosition().y, pawnRedTempModel->getPosition().z);
+		printf("model Anchor point = (%f, %f, %f)\n", pawnRedTempModel->getAnchorPoint().x, pawnRedTempModel->getAnchorPoint().y, pawnRedTempModel->getAnchorPoint().z);
 		break;
 
 	case 'z':
-		model->moveUp(1);
-		printf("model Pos = (%f, %f, %f)\n", model->getPosition().x, model->getPosition().y, model->getPosition().z);
-		printf("model Anchor point = (%f, %f, %f)\n", model->getAnchorPoint().x, model->getAnchorPoint().y, model->getAnchorPoint().z);
+		pawnRedTempModel->moveUp(1);
+		printf("pawnRedTemppawnRedTempModel Pos = (%f, %f, %f)\n", pawnRedTempModel->getPosition().x, pawnRedTempModel->getPosition().y, pawnRedTempModel->getPosition().z);
+		printf("pawnRedTempModel Anchor point = (%f, %f, %f)\n", pawnRedTempModel->getAnchorPoint().x, pawnRedTempModel->getAnchorPoint().y, pawnRedTempModel->getAnchorPoint().z);
 		break;
 
-	case 'c':
-		model->moveLeft(1);
-		printf("model Pos = (%f, %f, %f)\n", model->getPosition().x, model->getPosition().y, model->getPosition().z);
-		printf("model Anchor point = (%f, %f, %f)\n", model->getAnchorPoint().x, model->getAnchorPoint().y, model->getAnchorPoint().z);
+	case 'a':
+		pawnRedTempModel->moveLeft(1);
+		printf("pawnRedTempModel Pos = (%f, %f, %f)\n", pawnRedTempModel->getPosition().x, pawnRedTempModel->getPosition().y, pawnRedTempModel->getPosition().z);
+		printf("pawnRedTempModel Anchor point = (%f, %f, %f)\n", pawnRedTempModel->getAnchorPoint().x, pawnRedTempModel->getAnchorPoint().y, pawnRedTempModel->getAnchorPoint().z);
 		break;
 
-	case 't':
-		model->moveRight(1);
-		printf("model Pos = (%f, %f, %f)\n", model->getPosition().x, model->getPosition().y, model->getPosition().z);
-		printf("model Anchor point = (%f, %f, %f)\n", model->getAnchorPoint().x, model->getAnchorPoint().y, model->getAnchorPoint().z);
-		break;
 	case 'd':
-		model->moveIn(1);
-		printf("model Pos = (%f, %f, %f)\n", model->getPosition().x, model->getPosition().y, model->getPosition().z);
-		printf("model Anchor point = (%f, %f, %f)\n", model->getAnchorPoint().x, model->getAnchorPoint().y, model->getAnchorPoint().z);
+		pawnRedTempModel->moveRight(1);
+		printf("pawnRedTempModel Pos = (%f, %f, %f)\n", pawnRedTempModel->getPosition().x, pawnRedTempModel->getPosition().y, pawnRedTempModel->getPosition().z);
+		printf("pawnRedTempModel Anchor point = (%f, %f, %f)\n", pawnRedTempModel->getAnchorPoint().x, pawnRedTempModel->getAnchorPoint().y, pawnRedTempModel->getAnchorPoint().z);
 		break;
-	case 'g':
-		model->moveOut(1);
-		printf("model Pos = (%f, %f, %f)\n", model->getPosition().x, model->getPosition().y, model->getPosition().z);
-		printf("model Anchor point = (%f, %f, %f)\n", model->getAnchorPoint().x, model->getAnchorPoint().y, model->getAnchorPoint().z);
+	case 'w':
+		pawnRedTempModel->moveIn(1);
+		printf("pawnRedTempModel Pos = (%f, %f, %f)\n", pawnRedTempModel->getPosition().x, pawnRedTempModel->getPosition().y, pawnRedTempModel->getPosition().z);
+		printf("pawnRedTempModel Anchor point = (%f, %f, %f)\n", pawnRedTempModel->getAnchorPoint().x, pawnRedTempModel->getAnchorPoint().y, pawnRedTempModel->getAnchorPoint().z);
+		break;
+	case 's':
+		pawnRedTempModel->moveOut(1);
+		printf("pawnRedTempModel Pos = (%f, %f, %f)\n", pawnRedTempModel->getPosition().x, pawnRedTempModel->getPosition().y, pawnRedTempModel->getPosition().z);
+		printf("pawnRedTempModel Anchor point = (%f, %f, %f)\n", pawnRedTempModel->getAnchorPoint().x, pawnRedTempModel->getAnchorPoint().y, pawnRedTempModel->getAnchorPoint().z);
 		break;
 	}
 }

@@ -40,6 +40,10 @@ BaseModel::BaseModel(){
 BaseModel::BaseModel( const BaseModel* other )
 {
 	memcpy(this, other, sizeof(*other));
+    this->mVisible = true;
+    this->mSelected = false;
+    this->mDrawKnife = false;
+	this->mDrawShield = false;
 }
 
 BaseModel::~BaseModel(){
