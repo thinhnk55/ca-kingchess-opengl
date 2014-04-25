@@ -14,6 +14,7 @@ public: virtual void set##funName(varType var){ varName = var; }
 DEFINE INDEX OF MODELS
 
 *****************/
+/*red pieces */
 #define PAWN_RED_1 0
 #define PAWN_RED_2 1
 #define PAWN_RED_3 2
@@ -22,15 +23,24 @@ DEFINE INDEX OF MODELS
 #define PAWN_RED_6 5
 #define PAWN_RED_7 6
 #define PAWN_RED_8 7
-#define BISHOP_RED_1 8
-#define BISHOP_RED_2 9
-#define KNIGHT_RED_1 10
-#define KNIGHT_RED_2 11
-#define ROOK_RED_1 12
-#define ROOK_RED_2 13
-#define QUEEN_RED 14
-#define KING_RED 15
+#define BISHOP_RED_1 10
+#define BISHOP_RED_2 13
+#define KNIGHT_RED_1 9
+#define KNIGHT_RED_2 14
+#define ROOK_RED_1 8
+#define ROOK_RED_2 15
+#define QUEEN_RED 11
+#define KING_RED 12
 
+/*blue pieces*/
+#define PAWN_BLUE_1 16
+#define PAWN_BLUE_2 17
+#define PAWN_BLUE_3 18
+#define PAWN_BLUE_4 19
+#define PAWN_BLUE_5 20
+#define PAWN_BLUE_6 21
+#define PAWN_BLUE_7 22
+#define PAWN_BLUE_8 23
 enum Turn
 {
 	BLACK, 

@@ -29,7 +29,6 @@ public:
 	ExtraModel* allCells[BOARD_SIZE][BOARD_SIZE];
 
 	BaseModel* pawnRedTempModel;
-    BaseModel* bishopRedTempModel;
 
     BaseModel* models[32];
 

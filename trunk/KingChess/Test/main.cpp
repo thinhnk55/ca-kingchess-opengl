@@ -23,7 +23,8 @@ using namespace std;
 void initGL(){
 	glShadeModel(GL_SMOOTH);                    // shading mathod: GL_SMOOTH or GL_FLAT
 	glPixelStorei(GL_UNPACK_ALIGNMENT, 4);      // 4-byte pixel alignment
-
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
 	glClearColor(0.3, 0.3, 0.3, 1);                   // background color
 	glClearStencil(0);                          // clear stencil buffer
 	glClearDepth(1.0f);                         // 0 is near, 1 is far
@@ -45,7 +46,8 @@ void initGL(){
 
 void display(){
 	glStencilMask(0xffffffff);
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);	
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT | GL_STENCIL_BUFFER_BIT);
+    
 	glClearStencil(0x4);
 	
 	glPushMatrix();
@@ -115,10 +117,10 @@ void keyboardCB(unsigned char key, int x, int y){
 	switch (key)
 	{
 	case 'g':
-		Camera::inst().zoom(2);
+		Camera::inst().zoom(5);
 		break;
 	case 'h':
-		Camera::inst().zoom(-2);
+		Camera::inst().zoom(-5);
 		break;
 	default:
 		GameScene::inst().processKeyBoard(key, x, y);

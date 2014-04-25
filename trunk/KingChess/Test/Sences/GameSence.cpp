@@ -67,52 +67,72 @@ void GameScene::initEnties(){
 	/*set red pawns positions*/
     models[PAWN_RED_1] = new BaseModel(pawnRedTempModel);
     models[PAWN_RED_1]->setPosition(Vector3(-44,8,31));
-    models[PAWN_RED_2] = new BaseModel(pawnRedTempModel);
-    models[PAWN_RED_2]->setPosition(Vector3(-31,8,31));
-    models[PAWN_RED_3] = new BaseModel(pawnRedTempModel);
-    models[PAWN_RED_3]->setPosition(Vector3(-19,8,31));
-    models[PAWN_RED_4] = new BaseModel(pawnRedTempModel);
-    models[PAWN_RED_4]->setPosition(Vector3(-6,8,31));
-    models[PAWN_RED_5] = new BaseModel(pawnRedTempModel);
-    models[PAWN_RED_5]->setPosition(Vector3(6,8,31));
-    models[PAWN_RED_6] = new BaseModel(pawnRedTempModel);
-    models[PAWN_RED_6]->setPosition(Vector3(19,8,31));
-    models[PAWN_RED_7] = new BaseModel(pawnRedTempModel);
-    models[PAWN_RED_7]->setPosition(Vector3(31,8,31));
-    models[PAWN_RED_8] = new BaseModel(pawnRedTempModel);
-    models[PAWN_RED_8]->setPosition(Vector3(44,8,31));
+    //models[PAWN_RED_2] = new BaseModel(pawnRedTempModel);
+    //models[PAWN_RED_2]->setPosition(Vector3(-31,8,31));
+    //models[PAWN_RED_3] = new BaseModel(pawnRedTempModel);
+    //models[PAWN_RED_3]->setPosition(Vector3(-19,8,31));
+    //models[PAWN_RED_4] = new BaseModel(pawnRedTempModel);
+    //models[PAWN_RED_4]->setPosition(Vector3(-6,8,31));
+    //models[PAWN_RED_5] = new BaseModel(pawnRedTempModel);
+    //models[PAWN_RED_5]->setPosition(Vector3(6,8,31));
+    //models[PAWN_RED_6] = new BaseModel(pawnRedTempModel);
+    //models[PAWN_RED_6]->setPosition(Vector3(19,8,31));
+    //models[PAWN_RED_7] = new BaseModel(pawnRedTempModel);
+    //models[PAWN_RED_7]->setPosition(Vector3(31,8,31));
+    //models[PAWN_RED_8] = new BaseModel(pawnRedTempModel);
+    //models[PAWN_RED_8]->setPosition(Vector3(44,8,31));
 
-    /*set red bishops positions*/
-    models[BISHOP_RED_1] = new BaseModel();
-    models[BISHOP_RED_1]->loadModel("Models/Bishop.obj");
-    models[BISHOP_RED_1]->setPosition(Vector3(-19,15,44));
-    models[BISHOP_RED_2] = new BaseModel(models[BISHOP_RED_1]);
-    models[BISHOP_RED_2]->setPosition(Vector3(19,15,44));
+    ///*set red bishops positions*/
+    //models[BISHOP_RED_1] = new BaseModel();
+    //models[BISHOP_RED_1]->loadModel("Models/Bishop.obj");
+    //models[BISHOP_RED_1]->setPosition(Vector3(-19,9,44));
+    //models[BISHOP_RED_2] = new BaseModel(models[BISHOP_RED_1]);
+    //models[BISHOP_RED_2]->setPosition(Vector3(19,9,44));
 
-    /*set red knights positions*/
-    models[KNIGHT_RED_1] = new BaseModel();
-    models[KNIGHT_RED_1]->loadModel("Models/knight.obj");
-    models[KNIGHT_RED_1]->setPosition(Vector3(-32,12,44));
-    models[KNIGHT_RED_1]->setAngleRotate(-90);
-    models[KNIGHT_RED_2] = new BaseModel(models[KNIGHT_RED_1]);
-    models[KNIGHT_RED_2]->setPosition(Vector3(32,12,44));
+    ///*set red knights positions*/
+    //models[KNIGHT_RED_1] = new BaseModel();
+    //models[KNIGHT_RED_1]->loadModel("Models/knight.obj");
+    //models[KNIGHT_RED_1]->setPosition(Vector3(-32,9,44));
+    //models[KNIGHT_RED_1]->setAngleRotate(-90);
+    //models[KNIGHT_RED_2] = new BaseModel(models[KNIGHT_RED_1]);
+    //models[KNIGHT_RED_2]->setPosition(Vector3(32,9,44));
 
-    /*set red rooks positions*/
-    models[ROOK_RED_1] = new BaseModel();
-    models[ROOK_RED_1]->loadModel("Models/Rook.obj");
-    models[ROOK_RED_1]->setPosition(Vector3(-44,13,44));
-    models[ROOK_RED_2] = new BaseModel(models[ROOK_RED_1]);
-    models[ROOK_RED_2]->setPosition(Vector3(44,13,44));
+    ///*set red rooks positions*/
+    //models[ROOK_RED_1] = new BaseModel();
+    //models[ROOK_RED_1]->loadModel("Models/Rook.obj");
+    //models[ROOK_RED_1]->setPosition(Vector3(-44,9,44));
+    //models[ROOK_RED_2] = new BaseModel(models[ROOK_RED_1]);
+    //models[ROOK_RED_2]->setPosition(Vector3(44,9,44));
 
-    /*set red queen positions*/
-    models[QUEEN_RED] = new BaseModel();
-    models[QUEEN_RED]->loadModel("Models/Queen.obj");
-    models[QUEEN_RED]->setPosition(Vector3(-6,15,44));
+    ///*set red queen positions*/
+    //models[QUEEN_RED] = new BaseModel();
+    //models[QUEEN_RED]->loadModel("Models/Queen.obj");
+    //models[QUEEN_RED]->setPosition(Vector3(-6,9,44));
 
-    /*set red king positions*/
-    models[KING_RED] = new BaseModel();
-    models[KING_RED]->loadModel("Models/King.obj");
-    models[KING_RED]->setPosition(Vector3(6,18,44));
+    ///*set red king positions*/
+    //models[KING_RED] = new BaseModel();
+    //models[KING_RED]->loadModel("Models/King.obj");
+    //models[KING_RED]->setPosition(Vector3(6,10,44));
+
+    /*set blue pawns positions*/
+    models[PAWN_BLUE_1] = new BaseModel();
+    models[PAWN_BLUE_1]->loadModel("Models/PawnBlue.obj");
+    models[PAWN_BLUE_1]->setPosition(Vector3(-44,8,-31));
+    models[PAWN_BLUE_2] = new BaseModel(models[PAWN_BLUE_1]);
+    models[PAWN_BLUE_2]->setPosition(Vector3(-31,8,-31));
+    models[PAWN_BLUE_3] = new BaseModel(models[PAWN_BLUE_1]);
+    models[PAWN_BLUE_3]->setPosition(Vector3(-19,8,-31));
+    models[PAWN_BLUE_4] = new BaseModel(models[PAWN_BLUE_1]);
+    models[PAWN_BLUE_4]->setPosition(Vector3(-6,8,-31));
+    models[PAWN_BLUE_5] = new BaseModel(models[PAWN_BLUE_1]);
+    models[PAWN_BLUE_5]->setPosition(Vector3(6,8,-31));
+    models[PAWN_BLUE_6] = new BaseModel(models[PAWN_BLUE_1]);
+    models[PAWN_BLUE_6]->setPosition(Vector3(19,8,-31));
+    models[PAWN_BLUE_7] = new BaseModel(models[PAWN_BLUE_1]);
+    models[PAWN_BLUE_7]->setPosition(Vector3(31,8,-31));
+    models[PAWN_BLUE_8] = new BaseModel(models[PAWN_BLUE_1]);
+    models[PAWN_BLUE_8]->setPosition(Vector3(44,8,-31));
+
 }
 
 void GameScene::initSky(){
@@ -150,8 +170,9 @@ void GameScene::drawSence(){
 
 	pawnRedTempModel->drawModel();
 
-    for(int i = 0 ; i < 16 ; i++){
-        models[i] ->drawModel();
+    for(int i = 0 ; i < 32 ; i++){
+        if(models[i] != NULL)
+            models[i] ->drawModel();
     }
 	board->drawModel();
 
@@ -164,10 +185,11 @@ void GameScene::drawSence(){
 	glDisable(GL_LIGHTING);
 	glBegin(GL_LINES);
 
-	//Vector3 a = mViewRay.origin + 100*mViewRay.direction;
-	//glVertex3f(mViewRay.origin.x, mViewRay.origin.y, mViewRay.origin.z);
-	//glVertex3f(a.x, a.y, a.z);
-
+	Vector3 a = mViewRay.origin + 200*mViewRay.direction;
+	glVertex3f(mViewRay.origin.x, mViewRay.origin.y, mViewRay.origin.z);
+	glVertex3f(a.x, a.y, a.z);
+    //cout << mViewRay.origin.x << " " << mViewRay.origin.y << " " << mViewRay.origin.z << endl;
+       
 	glEnd();
 	glEnable(GL_LIGHTING);  
 }
@@ -230,11 +252,10 @@ int GameScene::getSelectedIndex(int mousex, int mousey){
 
     float minDist = -1;
     float currentDist = -1;
-
     // Get x, y coordinate in zNear plane
-	int window_y = mousex - Graphic::inst().screenHeight/2;
+	int window_y = (Graphic::inst().screenHeight - mousey) - Graphic::inst().screenHeight/2;
 	double norm_y = double(window_y)/double(Graphic::inst().screenHeight/2);
-	int window_x = mousey - Graphic::inst().screenWidth/2;
+	int window_x = mousex - Graphic::inst().screenWidth/2;
 	double norm_x = double(window_x)/double(Graphic::inst().screenWidth/2);
 
 	float aspect = Graphic::inst().screenWidth/Graphic::inst().screenHeight;
@@ -242,24 +263,24 @@ int GameScene::getSelectedIndex(int mousex, int mousey){
 	float y = Graphic::inst().near_height * norm_y;
 	float x = Graphic::inst().near_height * aspect * norm_x;
 
-    Ray ray;
-
     // Get ModelView matrix
 	float m[16];
 	glGetFloatv(GL_MODELVIEW_MATRIX , m);
 
 	Matrix4 inverseModelViewMatrix = Matrix4(m).inverse();
 
-    Vector3 origin = Camera::inst().eye;
+    Vector4 origin = Vector4()*inverseModelViewMatrix;
     Vector3 direction = Vector3(x,y,-Graphic::inst().zNear)*inverseModelViewMatrix;
 
-    ray.set(origin,direction);
+    cout << origin.toString() << endl;
+
+    mViewRay.set(origin.toVector3(),direction);
 
     int index = -1;
 
-    for(int i = 0 ; i < 16 ; i++){
+    for(int i = 0 ; i < 32 ; i++){
 
-        if(ray.hasIntersected(models[i]->boundingbox())){
+        if(models[i] != NULL && mViewRay.hasIntersected(models[i]->boundingbox())){
             
             currentDist = (Camera::inst().eye - models[i]->getPosition()).magnitude();
 
@@ -274,8 +295,6 @@ int GameScene::getSelectedIndex(int mousex, int mousey){
                     index = i;
                 }
             }
-
-            //break;
         }
             
     }
@@ -285,7 +304,8 @@ int GameScene::getSelectedIndex(int mousex, int mousey){
         models[index]->mDrawKnife = true;
         prevSelected = index;
     }
-    
+    else
+        models[prevSelected]->mDrawKnife = false;
     return index;
 }
 

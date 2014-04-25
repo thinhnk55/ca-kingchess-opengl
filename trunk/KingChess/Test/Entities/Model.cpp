@@ -256,8 +256,8 @@ void Model::shadowMatrix(GLfloat shadowMat[4][4], GLfloat groundplane[4], GLfloa
 
 BoundingBox Model::boundingbox()
 {
-	minVec.set( - getWidth()*zoomFactor,  - getHeight()*zoomFactor,  - getLength()*zoomFactor);
-	maxVec.set( + getWidth()*zoomFactor,  + getHeight()*zoomFactor,  + getLength()*zoomFactor);
+	minVec.set( - getWidth()*1/2,  - getHeight()*1/2,  - getLength()*1/2);
+	maxVec.set( + getWidth()*1/2,  + getHeight()*1/2,  + getLength()*1/2);
 	Vector3 mAnchorOffset(mAnchor.x*getWidth(), mAnchor.y*getHeight(),
 		mAnchor.z*getLength());
 	return BoundingBox(minVec+mPos-mAnchorOffset, maxVec+mPos-mAnchorOffset);

@@ -17,7 +17,8 @@ Mouse& Mouse::inst()
 
 void Mouse::processMouse( int button, int state, int x, int y )
 {
-	Camera::inst().save(x, y);	
+	Camera::inst().save(x, y);
+    
 	if(button == GLUT_LEFT_BUTTON)
 		{
 			if(state == GLUT_DOWN){
