@@ -2,11 +2,11 @@
 # Object "Board":
 
 newmtl Glass
-Ka 0.576 0.373 0
-Kd 0.576 0.373 0
+Ka 1 1 1
+Kd 0.2 0.2 0.2
 Ks 1 1 1
 d 1.0
-Ns 1000.0
+Ns 500.0
 map_Kd Chess_Board.jpg
 
 newmtl Wood

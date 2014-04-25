@@ -14,8 +14,8 @@ public:
 	Light()
 	{
 		setPosition(10, 10, 10, 1);
-		setAmbient(0.4, 0.4, 0.4, 1.0);
-		setDiffuse(1, 1, 1, 1.0);
+		setAmbient(0.2, 0.2, 0.2, 1.0);
+		setDiffuse(0.2, 0.2, 0.2, 1.0);
 		setSpecular(1.0, 1.0, 1.0, 1.0);
 		glEnable(GL_LIGHT0);
 	}
@@ -24,7 +24,7 @@ public:
 	{
 		setPosition(px, py, pz, pw);
 		setAmbient(0.2, 0.2, 0.2, 1.0);
-		setDiffuse(0.7, 0.7, 0.7, 1.0);
+		setDiffuse(0.2, 0.2, 0.2, 1.0);
 		setSpecular(1.0, 1.0, 1.0, 1.0);
 		glEnable(GL_LIGHT0);  
 	}
