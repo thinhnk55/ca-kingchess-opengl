@@ -49,6 +49,9 @@ DEFINE INDEX OF MODELS
 #define BISHOP_BLUE_2 29
 #define QUEEN_BLUE 30
 #define KING_BLUE 31
+
+/*boardcell*/
+#define BOARD_CELL_1 32
 enum Turn
 {
 	BLACK, 

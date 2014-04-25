@@ -55,11 +55,11 @@ void GameScene::initEnties(){
 
 	initSprites();
 	
-	initSky();
+	//initSky();
 
 	printf("Finish sky\n");
 	
-	initGround();
+	//initGround();
 	
 	printf("Finish ground\n");
 	
