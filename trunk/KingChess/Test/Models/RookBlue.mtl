@@ -1,11 +1,16 @@
-# Created with Anim8or 0.97d beta
-# Object "Rook":
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 25.04.2014 19:04:39
 
 newmtl Wood
-Ka 1 1 1
-Kd 1 1 1
-Ks 1 1 1
-d 1.0
-Ns 1000.0
-map_Kd Blue.jpg
-
+	Ns 1000.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 1.0000 1.0000 1.0000
+	Kd 1.0000 1.0000 1.0000
+	Ks 1.0000 1.0000 1.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka F:\Work\DaiHoc\Nam3HK2\ComputerGraphics\Visual Studio\Chess\ca-kingchess-opengl\KingChess\Test\Models\Blue.jpg
+	map_Kd F:\Work\DaiHoc\Nam3HK2\ComputerGraphics\Visual Studio\Chess\ca-kingchess-opengl\KingChess\Test\Models\Blue.jpg

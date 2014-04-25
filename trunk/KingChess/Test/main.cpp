@@ -23,8 +23,6 @@ using namespace std;
 void initGL(){
 	glShadeModel(GL_SMOOTH);                    // shading mathod: GL_SMOOTH or GL_FLAT
 	glPixelStorei(GL_UNPACK_ALIGNMENT, 4);      // 4-byte pixel alignment
-    glMatrixMode(GL_MODELVIEW);
-    glLoadIdentity();
 	glClearColor(0.3, 0.3, 0.3, 1);                   // background color
 	glClearStencil(0);                          // clear stencil buffer
 	glClearDepth(1.0f);                         // 0 is near, 1 is far
@@ -53,7 +51,7 @@ void display(){
 	glPushMatrix();
 	glBegin(GL_LINES);
 	
-	for(int i = 0; i < 100; i++){
+	/*for(int i = 0; i < 100; i++){
 		glColor3f(1, 0, 0);
 		glVertex3f(-100, -8, -100 + 2*i);
 		glVertex3f(100, -8, -100 + 2*i);
@@ -62,8 +60,8 @@ void display(){
 		glVertex3f(-100 + 2*i, -8, -100);
 		glVertex3f(-100 + 2*i, -8, 100);
 	}
-
-	glColor3f(0, 1, 0);
+*/
+	//glColor3f(0, 1, 0);
 	//glVertex3f(0, -100, 0);
 	//glVertex3f(0, 100, 0);
 	
