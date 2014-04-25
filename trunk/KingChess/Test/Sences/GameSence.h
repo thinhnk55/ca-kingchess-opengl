@@ -7,7 +7,8 @@
 #include "../Entities/LogicGame.h"
 #include "../Entities/Sprite2D.h"
 #include "../Entities/ExtraModel.h"
-
+#include "../Control/Camera.h"
+#include "../Control/Graphic.h"
 
 class GameScene
 {
@@ -28,6 +29,7 @@ public:
 	ExtraModel* allCells[BOARD_SIZE][BOARD_SIZE];
 
 	BaseModel* pawnRedTempModel;
+    BaseModel* bishopRedTempModel;
 
     BaseModel* models[32];
 
@@ -55,6 +57,7 @@ public:
 	void processKeyBoard();
     
     int getSelectedIndex(int mouse_x, int mouse_y);
+
     int prevSelected;
 };
 

@@ -2,6 +2,7 @@
 #define _MOUSE_H_
 
 #include "GL/freeglut.h"
+#include "../Sences/GameSence.h"
 
 class Mouse
 {

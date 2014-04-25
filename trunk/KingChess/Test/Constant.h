@@ -22,6 +22,14 @@ DEFINE INDEX OF MODELS
 #define PAWN_RED_6 5
 #define PAWN_RED_7 6
 #define PAWN_RED_8 7
+#define BISHOP_RED_1 8
+#define BISHOP_RED_2 9
+#define KNIGHT_RED_1 10
+#define KNIGHT_RED_2 11
+#define ROOK_RED_1 12
+#define ROOK_RED_2 13
+#define QUEEN_RED 14
+#define KING_RED 15
 
 enum Turn
 {

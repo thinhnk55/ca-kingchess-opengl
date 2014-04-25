@@ -3,7 +3,6 @@
 #include "../Constant.h"
 
 
-
 GameScene::GameScene(void)
 {
 	logic = new LogicGame();
@@ -17,7 +16,7 @@ GameScene::GameScene(void)
 
 	initEnties();
 
-    prevSelected = -1;
+    prevSelected = 0;
 }
 
 GameScene& GameScene::inst()
@@ -42,10 +41,6 @@ void GameScene::initEnties(){
 	pawnRedTempModel->loadModel("Models/pawn.obj");
 	pawnRedTempModel->setPosition(Vector3(0, 8, 0));
 	pawnRedTempModel->setAngleRotate(90.0);
-	//pawnRedTempModel->mShadow = true;
-	//pawnRedTempModel->mSelected = true;
-	//pawnRedTempModel->mDrawKnife = true;
-	//pawnRedTempModel->mDrawShield = true;
 	pawnRedTempModel->mVisible = true;
     
 	printf("model Pos = (%f, %f, %f)\n", pawnRedTempModel->getPosition().x, pawnRedTempModel->getPosition().y, pawnRedTempModel->getPosition().z);
@@ -86,6 +81,38 @@ void GameScene::initEnties(){
     models[PAWN_RED_7]->setPosition(Vector3(31,8,31));
     models[PAWN_RED_8] = new BaseModel(pawnRedTempModel);
     models[PAWN_RED_8]->setPosition(Vector3(44,8,31));
+
+    /*set red bishops positions*/
+    models[BISHOP_RED_1] = new BaseModel();
+    models[BISHOP_RED_1]->loadModel("Models/Bishop.obj");
+    models[BISHOP_RED_1]->setPosition(Vector3(-19,15,44));
+    models[BISHOP_RED_2] = new BaseModel(models[BISHOP_RED_1]);
+    models[BISHOP_RED_2]->setPosition(Vector3(19,15,44));
+
+    /*set red knights positions*/
+    models[KNIGHT_RED_1] = new BaseModel();
+    models[KNIGHT_RED_1]->loadModel("Models/knight.obj");
+    models[KNIGHT_RED_1]->setPosition(Vector3(-32,12,44));
+    models[KNIGHT_RED_1]->setAngleRotate(-90);
+    models[KNIGHT_RED_2] = new BaseModel(models[KNIGHT_RED_1]);
+    models[KNIGHT_RED_2]->setPosition(Vector3(32,12,44));
+
+    /*set red rooks positions*/
+    models[ROOK_RED_1] = new BaseModel();
+    models[ROOK_RED_1]->loadModel("Models/Rook.obj");
+    models[ROOK_RED_1]->setPosition(Vector3(-44,13,44));
+    models[ROOK_RED_2] = new BaseModel(models[ROOK_RED_1]);
+    models[ROOK_RED_2]->setPosition(Vector3(44,13,44));
+
+    /*set red queen positions*/
+    models[QUEEN_RED] = new BaseModel();
+    models[QUEEN_RED]->loadModel("Models/Queen.obj");
+    models[QUEEN_RED]->setPosition(Vector3(-6,15,44));
+
+    /*set red king positions*/
+    models[KING_RED] = new BaseModel();
+    models[KING_RED]->loadModel("Models/King.obj");
+    models[KING_RED]->setPosition(Vector3(6,18,44));
 }
 
 void GameScene::initSky(){
@@ -122,7 +149,8 @@ void GameScene::drawSence(){
 	
 
 	pawnRedTempModel->drawModel();
-    for(int i = 0 ; i < 8 ; i++){
+
+    for(int i = 0 ; i < 16 ; i++){
         models[i] ->drawModel();
     }
 	board->drawModel();
@@ -135,9 +163,11 @@ void GameScene::drawSence(){
 	//Debug ray
 	glDisable(GL_LIGHTING);
 	glBegin(GL_LINES);
-	Vector3 a = mViewRay.origin + 100*mViewRay.direction;
-	glVertex3f(mViewRay.origin.x, mViewRay.origin.y, mViewRay.origin.z);
-	glVertex3f(a.x, a.y, a.z);
+
+	//Vector3 a = mViewRay.origin + 100*mViewRay.direction;
+	//glVertex3f(mViewRay.origin.x, mViewRay.origin.y, mViewRay.origin.z);
+	//glVertex3f(a.x, a.y, a.z);
+
 	glEnd();
 	glEnable(GL_LIGHTING);  
 }
@@ -194,6 +224,69 @@ void GameScene::processKeyBoard(unsigned key, int x, int y){
 		printf("pawnRedTempModel Anchor point = (%f, %f, %f)\n", pawnRedTempModel->getAnchorPoint().x, pawnRedTempModel->getAnchorPoint().y, pawnRedTempModel->getAnchorPoint().z);
 		break;
 	}
+}
+
+int GameScene::getSelectedIndex(int mousex, int mousey){
+
+    float minDist = -1;
+    float currentDist = -1;
+
+    // Get x, y coordinate in zNear plane
+	int window_y = mousex - Graphic::inst().screenHeight/2;
+	double norm_y = double(window_y)/double(Graphic::inst().screenHeight/2);
+	int window_x = mousey - Graphic::inst().screenWidth/2;
+	double norm_x = double(window_x)/double(Graphic::inst().screenWidth/2);
+
+	float aspect = Graphic::inst().screenWidth/Graphic::inst().screenHeight;
+
+	float y = Graphic::inst().near_height * norm_y;
+	float x = Graphic::inst().near_height * aspect * norm_x;
+
+    Ray ray;
+
+    // Get ModelView matrix
+	float m[16];
+	glGetFloatv(GL_MODELVIEW_MATRIX , m);
+
+	Matrix4 inverseModelViewMatrix = Matrix4(m).inverse();
+
+    Vector3 origin = Camera::inst().eye;
+    Vector3 direction = Vector3(x,y,-Graphic::inst().zNear)*inverseModelViewMatrix;
+
+    ray.set(origin,direction);
+
+    int index = -1;
+
+    for(int i = 0 ; i < 16 ; i++){
+
+        if(ray.hasIntersected(models[i]->boundingbox())){
+            
+            currentDist = (Camera::inst().eye - models[i]->getPosition()).magnitude();
+
+            if(minDist == -1){
+                minDist = currentDist;
+                index = i;
+            }
+
+            else{
+                if(currentDist <= minDist){
+                    minDist = currentDist;
+                    index = i;
+                }
+            }
+
+            //break;
+        }
+            
+    }
+     
+    if(index != -1){   
+        models[prevSelected]->mDrawKnife = false;
+        models[index]->mDrawKnife = true;
+        prevSelected = index;
+    }
+    
+    return index;
 }
 
 GameScene::~GameScene(void)
