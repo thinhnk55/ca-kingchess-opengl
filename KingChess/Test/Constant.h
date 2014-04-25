@@ -41,6 +41,14 @@ DEFINE INDEX OF MODELS
 #define PAWN_BLUE_6 21
 #define PAWN_BLUE_7 22
 #define PAWN_BLUE_8 23
+#define ROOK_BLUE_1 24
+#define ROOK_BLUE_2 25
+#define KNIGHT_BLUE_1 26
+#define KNIGHT_BLUE_2 27
+#define BISHOP_BLUE_1 28
+#define BISHOP_BLUE_2 29
+#define QUEEN_BLUE 30
+#define KING_BLUE 31
 enum Turn
 {
 	BLACK, 

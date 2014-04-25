@@ -8,11 +8,11 @@ GameScene::GameScene(void)
 	logic = new LogicGame();
 	yCir = -15;
 	lightPosition[0] = 0;
-	lightPosition[1] = 20;
+	lightPosition[1] = 100;
 	lightPosition[2] = 0;
 	lightPosition[3] = 1;
 	lightAngle = 0.0;
-	lightHeight = 20;
+	lightHeight = 100;
 
 	initEnties();
 
@@ -55,11 +55,11 @@ void GameScene::initEnties(){
 
 	initSprites();
 	
-	//initSky();
+	initSky();
 
 	printf("Finish sky\n");
 	
-	//initGround();
+	initGround();
 	
 	printf("Finish ground\n");
 	printf("==========END============");
@@ -67,58 +67,58 @@ void GameScene::initEnties(){
 	/*set red pawns positions*/
     models[PAWN_RED_1] = new BaseModel(pawnRedTempModel);
     models[PAWN_RED_1]->setPosition(Vector3(-44,8,31));
-    //models[PAWN_RED_2] = new BaseModel(pawnRedTempModel);
-    //models[PAWN_RED_2]->setPosition(Vector3(-31,8,31));
-    //models[PAWN_RED_3] = new BaseModel(pawnRedTempModel);
-    //models[PAWN_RED_3]->setPosition(Vector3(-19,8,31));
-    //models[PAWN_RED_4] = new BaseModel(pawnRedTempModel);
-    //models[PAWN_RED_4]->setPosition(Vector3(-6,8,31));
-    //models[PAWN_RED_5] = new BaseModel(pawnRedTempModel);
-    //models[PAWN_RED_5]->setPosition(Vector3(6,8,31));
-    //models[PAWN_RED_6] = new BaseModel(pawnRedTempModel);
-    //models[PAWN_RED_6]->setPosition(Vector3(19,8,31));
-    //models[PAWN_RED_7] = new BaseModel(pawnRedTempModel);
-    //models[PAWN_RED_7]->setPosition(Vector3(31,8,31));
-    //models[PAWN_RED_8] = new BaseModel(pawnRedTempModel);
-    //models[PAWN_RED_8]->setPosition(Vector3(44,8,31));
+   /* models[PAWN_RED_2] = new BaseModel(pawnRedTempModel);
+    models[PAWN_RED_2]->setPosition(Vector3(-31,8,31));
+    models[PAWN_RED_3] = new BaseModel(pawnRedTempModel);
+    models[PAWN_RED_3]->setPosition(Vector3(-19,8,31));
+    models[PAWN_RED_4] = new BaseModel(pawnRedTempModel);
+    models[PAWN_RED_4]->setPosition(Vector3(-6,8,31));
+    models[PAWN_RED_5] = new BaseModel(pawnRedTempModel);
+    models[PAWN_RED_5]->setPosition(Vector3(6,8,31));
+    models[PAWN_RED_6] = new BaseModel(pawnRedTempModel);
+    models[PAWN_RED_6]->setPosition(Vector3(19,8,31));
+    models[PAWN_RED_7] = new BaseModel(pawnRedTempModel);
+    models[PAWN_RED_7]->setPosition(Vector3(31,8,31));
+    models[PAWN_RED_8] = new BaseModel(pawnRedTempModel);
+    models[PAWN_RED_8]->setPosition(Vector3(44,8,31));*/
 
-    ///*set red bishops positions*/
-    //models[BISHOP_RED_1] = new BaseModel();
-    //models[BISHOP_RED_1]->loadModel("Models/Bishop.obj");
-    //models[BISHOP_RED_1]->setPosition(Vector3(-19,9,44));
-    //models[BISHOP_RED_2] = new BaseModel(models[BISHOP_RED_1]);
-    //models[BISHOP_RED_2]->setPosition(Vector3(19,9,44));
+    /*set red bishops positions*/
+    models[BISHOP_RED_1] = new BaseModel();
+    models[BISHOP_RED_1]->loadModel("Models/Bishop.obj");
+    models[BISHOP_RED_1]->setPosition(Vector3(-19,9,44));
+   /* models[BISHOP_RED_2] = new BaseModel(models[BISHOP_RED_1]);
+    models[BISHOP_RED_2]->setPosition(Vector3(19,9,44));*/
 
-    ///*set red knights positions*/
-    //models[KNIGHT_RED_1] = new BaseModel();
-    //models[KNIGHT_RED_1]->loadModel("Models/knight.obj");
-    //models[KNIGHT_RED_1]->setPosition(Vector3(-32,9,44));
-    //models[KNIGHT_RED_1]->setAngleRotate(-90);
-    //models[KNIGHT_RED_2] = new BaseModel(models[KNIGHT_RED_1]);
-    //models[KNIGHT_RED_2]->setPosition(Vector3(32,9,44));
+    /*set red knights positions*/
+    models[KNIGHT_RED_1] = new BaseModel();
+    models[KNIGHT_RED_1]->loadModel("Models/knight.obj");
+    models[KNIGHT_RED_1]->setPosition(Vector3(-32,9,44));
+    models[KNIGHT_RED_1]->setAngleRotate(-90);
+   /* models[KNIGHT_RED_2] = new BaseModel(models[KNIGHT_RED_1]);
+    models[KNIGHT_RED_2]->setPosition(Vector3(32,9,44));*/
 
-    ///*set red rooks positions*/
-    //models[ROOK_RED_1] = new BaseModel();
-    //models[ROOK_RED_1]->loadModel("Models/Rook.obj");
-    //models[ROOK_RED_1]->setPosition(Vector3(-44,9,44));
-    //models[ROOK_RED_2] = new BaseModel(models[ROOK_RED_1]);
-    //models[ROOK_RED_2]->setPosition(Vector3(44,9,44));
+    /*set red rooks positions*/
+    models[ROOK_RED_1] = new BaseModel();
+    models[ROOK_RED_1]->loadModel("Models/Rook.obj");
+    models[ROOK_RED_1]->setPosition(Vector3(-44,9,44));
+    /*models[ROOK_RED_2] = new BaseModel(models[ROOK_RED_1]);
+    models[ROOK_RED_2]->setPosition(Vector3(44,9,44));*/
 
-    ///*set red queen positions*/
-    //models[QUEEN_RED] = new BaseModel();
-    //models[QUEEN_RED]->loadModel("Models/Queen.obj");
-    //models[QUEEN_RED]->setPosition(Vector3(-6,9,44));
+    /*set red queen positions*/
+    models[QUEEN_RED] = new BaseModel();
+    models[QUEEN_RED]->loadModel("Models/Queen.obj");
+    models[QUEEN_RED]->setPosition(Vector3(-6,9,44));
 
-    ///*set red king positions*/
-    //models[KING_RED] = new BaseModel();
-    //models[KING_RED]->loadModel("Models/King.obj");
-    //models[KING_RED]->setPosition(Vector3(6,10,44));
+    /*set red king positions*/
+    models[KING_RED] = new BaseModel();
+    models[KING_RED]->loadModel("Models/King.obj");
+    models[KING_RED]->setPosition(Vector3(6,10,44));
 
     /*set blue pawns positions*/
     models[PAWN_BLUE_1] = new BaseModel();
     models[PAWN_BLUE_1]->loadModel("Models/PawnBlue.obj");
     models[PAWN_BLUE_1]->setPosition(Vector3(-44,8,-31));
-    models[PAWN_BLUE_2] = new BaseModel(models[PAWN_BLUE_1]);
+    /*models[PAWN_BLUE_2] = new BaseModel(models[PAWN_BLUE_1]);
     models[PAWN_BLUE_2]->setPosition(Vector3(-31,8,-31));
     models[PAWN_BLUE_3] = new BaseModel(models[PAWN_BLUE_1]);
     models[PAWN_BLUE_3]->setPosition(Vector3(-19,8,-31));
@@ -131,8 +131,39 @@ void GameScene::initEnties(){
     models[PAWN_BLUE_7] = new BaseModel(models[PAWN_BLUE_1]);
     models[PAWN_BLUE_7]->setPosition(Vector3(31,8,-31));
     models[PAWN_BLUE_8] = new BaseModel(models[PAWN_BLUE_1]);
-    models[PAWN_BLUE_8]->setPosition(Vector3(44,8,-31));
+    models[PAWN_BLUE_8]->setPosition(Vector3(44,8,-31));*/
 
+    /*set blue rooks positions */
+    models[ROOK_BLUE_1] = new BaseModel();
+    models[ROOK_BLUE_1]->loadModel("Models/RookBlue.obj");
+    models[ROOK_BLUE_1]->setPosition(Vector3(-44,9,-44));
+   /* models[ROOK_BLUE_2] = new BaseModel(models[ROOK_BLUE_1]);
+    models[ROOK_BLUE_2]->setPosition(Vector3(44,9,-44));*/
+
+    /*set blue knights positions*/
+    models[KNIGHT_BLUE_1] = new BaseModel();
+    models[KNIGHT_BLUE_1]->loadModel("Models/knightBlue.obj");
+    models[KNIGHT_BLUE_1]->setPosition(Vector3(-32,9,-44));
+    models[KNIGHT_BLUE_1]->setAngleRotate(90);
+   /* models[KNIGHT_BLUE_2] = new BaseModel(models[KNIGHT_BLUE_1]);
+    models[KNIGHT_BLUE_2]->setPosition(Vector3(32,9,-44));*/
+
+    /*set blue bishops positions*/
+    models[BISHOP_BLUE_1] = new BaseModel();
+    models[BISHOP_BLUE_1]->loadModel("Models/BishopBlue.obj");
+    models[BISHOP_BLUE_1]->setPosition(Vector3(-19,9,-44));
+   /* models[BISHOP_BLUE_2] = new BaseModel(models[BISHOP_BLUE_1]);
+    models[BISHOP_BLUE_2]->setPosition(Vector3(19,9,-44));*/
+
+    /*set blue queen positions*/
+    models[QUEEN_BLUE] = new BaseModel();
+    models[QUEEN_BLUE]->loadModel("Models/QueenBlue.obj");
+    models[QUEEN_BLUE]->setPosition(Vector3(-6,9,-44));
+
+    /*set blue king positions*/
+    models[KING_BLUE] = new BaseModel();
+    models[KING_BLUE]->loadModel("Models/KingBlue.obj");
+    models[KING_BLUE]->setPosition(Vector3(6,10,-44));
 }
 
 void GameScene::initSky(){
@@ -158,14 +189,15 @@ void GameScene::drawCells(){
 		}
 	}
 }
+
 void GameScene::drawSence(){
 
-	/*float _ambient[4] = {1, 1, 1, 1};
+	float _ambient[4] = {1, 1, 1, 1};
 	glLightfv(GL_LIGHT0, GL_AMBIENT,  _ambient);
 	sky->drawModel();
 	Light::inst().setAmbient();
-	*/
-	//ground->drawModel();
+	
+	ground->drawModel();
 	
 
 	pawnRedTempModel->drawModel();
