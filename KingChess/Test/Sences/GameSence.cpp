@@ -62,7 +62,7 @@ void GameScene::initEnties(){
 	initGround();
 	
 	printf("Finish ground\n");
-	printf("==========END============");
+	
 
 	/*set red pawns positions*/
     models[PAWN_RED_1] = new BaseModel(pawnRedTempModel);
@@ -164,6 +164,8 @@ void GameScene::initEnties(){
     models[KING_BLUE] = new BaseModel();
     models[KING_BLUE]->loadModel("Models/KingBlue.obj");
     models[KING_BLUE]->setPosition(Vector3(6,10,-44));
+
+	printf("==========END============");
 }
 
 void GameScene::initSky(){
@@ -194,19 +196,20 @@ void GameScene::drawSence(){
 
 	float _ambient[4] = {1, 1, 1, 1};
 	glLightfv(GL_LIGHT0, GL_AMBIENT,  _ambient);
-	sky->drawModel();
+	//sky->drawModel();
+	
 	Light::inst().setAmbient();
+	//drawCells();
+	//ground->drawModel();
 	
-	ground->drawModel();
-	
-
+	board->drawModel();
 	pawnRedTempModel->drawModel();
 
     for(int i = 0 ; i < 32 ; i++){
         if(models[i] != NULL)
             models[i] ->drawModel();
     }
-	board->drawModel();
+	
 
 	//drawCells();
 	//Debug light
