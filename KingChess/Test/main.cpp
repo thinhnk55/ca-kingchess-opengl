@@ -16,6 +16,8 @@
 #include "Control/Graphic.h"
 #include "Sences/GameSence.h"
 
+#define WINDOW_WIDTH 600
+#define WINDOW_HEIGHT 600
 using namespace std;
 
 void initGL(){
@@ -60,8 +62,8 @@ void display(){
 	}
 
 	glColor3f(0, 1, 0);
-	glVertex3f(0, -100, 0);
-	glVertex3f(0, 100, 0);
+	//glVertex3f(0, -100, 0);
+	//glVertex3f(0, 100, 0);
 	
 	glEnd();
 	GameScene::inst().loop();
@@ -101,6 +103,7 @@ void reshapeCB(int width, int height) {
 	gluLookAt(Camera::inst().eye.x, Camera::inst().eye.y, Camera::inst().eye.z,
 		Camera::inst().at.x, Camera::inst().at.y, Camera::inst().at.z,
 		0, 1, 0 );
+    cout << width << " " << height << endl;
 }
 
 void mouseCB(int button, int stat, int x, int y){
@@ -112,10 +115,10 @@ void keyboardCB(unsigned char key, int x, int y){
 	switch (key)
 	{
 	case 'g':
-		Camera::inst().zoom(1);
+		Camera::inst().zoom(2);
 		break;
 	case 'h':
-		Camera::inst().zoom(-1);
+		Camera::inst().zoom(-2);
 		break;
 	default:
 		GameScene::inst().processKeyBoard(key, x, y);
@@ -138,8 +141,8 @@ int main(int argc, char *argv[]){
 
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_RGB | GLUT_SINGLE | GLUT_STENCIL);
-    glutInitWindowSize(600,600);
-    glutInitWindowPosition(50, 50);
+    glutInitWindowSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+    glutInitWindowPosition(100, 100);
     glutCreateWindow("Chess Application");
 
     initGL();
