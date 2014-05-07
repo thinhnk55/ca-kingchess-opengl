@@ -110,6 +110,7 @@
     <ClInclude Include="lib\Geometry.h" />
     <ClInclude Include="lib\mathlib.h" />
     <ClInclude Include="Input\Mouse.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Sences\GameSence.h" />
     <ClInclude Include="SOIL\image_DXT.h" />
     <ClInclude Include="SOIL\image_helper.h" />
@@ -117,6 +118,9 @@
     <ClInclude Include="SOIL\stbi_DDS_aug.h" />
     <ClInclude Include="SOIL\stbi_DDS_aug_c.h" />
     <ClInclude Include="SOIL\stb_image_aug.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Test.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

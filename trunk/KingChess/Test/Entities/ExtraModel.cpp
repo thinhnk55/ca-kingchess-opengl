@@ -6,6 +6,9 @@ ExtraModel::ExtraModel(void)
 {
 	zoomFactor = 1.0;
 	mVisible = true;
+    associatedChessPieceIndex = -1;
+    boardIndexX = -1;
+    boardIndexY = -1;
 }
 
 ExtraModel::ExtraModel( const ExtraModel* other )
@@ -33,7 +36,6 @@ void ExtraModel::drawModel()
 
 	draw();
 
-	glPopMatrix();
 	glPopMatrix();
 }
 

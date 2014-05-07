@@ -15,22 +15,22 @@ DEFINE INDEX OF MODELS
 
 *****************/
 /*red pieces */
-#define PAWN_RED_1 0
-#define PAWN_RED_2 1
-#define PAWN_RED_3 2
-#define PAWN_RED_4 3
-#define PAWN_RED_5 4
-#define PAWN_RED_6 5
-#define PAWN_RED_7 6
-#define PAWN_RED_8 7
-#define BISHOP_RED_1 10
-#define BISHOP_RED_2 13
-#define KNIGHT_RED_1 9
-#define KNIGHT_RED_2 14
-#define ROOK_RED_1 8
-#define ROOK_RED_2 15
-#define QUEEN_RED 11
-#define KING_RED 12
+#define PAWN_RED_1 8
+#define PAWN_RED_2 9
+#define PAWN_RED_3 10
+#define PAWN_RED_4 11
+#define PAWN_RED_5 12
+#define PAWN_RED_6 13
+#define PAWN_RED_7 14
+#define PAWN_RED_8 15
+#define BISHOP_RED_1 2
+#define BISHOP_RED_2 5
+#define KNIGHT_RED_1 1
+#define KNIGHT_RED_2 6
+#define ROOK_RED_1 0
+#define ROOK_RED_2 7
+#define QUEEN_RED 3
+#define KING_RED 4
 
 /*blue pieces*/
 #define PAWN_BLUE_1 16
@@ -42,16 +42,17 @@ DEFINE INDEX OF MODELS
 #define PAWN_BLUE_7 22
 #define PAWN_BLUE_8 23
 #define ROOK_BLUE_1 24
-#define ROOK_BLUE_2 25
-#define KNIGHT_BLUE_1 26
-#define KNIGHT_BLUE_2 27
-#define BISHOP_BLUE_1 28
+#define ROOK_BLUE_2 31
+#define KNIGHT_BLUE_1 25
+#define KNIGHT_BLUE_2 30
+#define BISHOP_BLUE_1 26
 #define BISHOP_BLUE_2 29
-#define QUEEN_BLUE 30
-#define KING_BLUE 31
+#define QUEEN_BLUE 27
+#define KING_BLUE 28
 
-/*boardcell*/
-#define BOARD_CELL_1 32
+#define MOVING 1
+#define IDLE 0
+#define FIGHT 2
 enum Turn
 {
 	BLACK, 

@@ -25,6 +25,7 @@ public:
 	void processMouse(int button, int state, int x, int y);
 	void processMouseMotion(int x, int y);
 	void processMousePassiveMotion(int x, int y);
+
 };
 
 
