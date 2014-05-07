@@ -41,9 +41,10 @@ public:
 	float yCir;
 
 	void initEnties();
-	void initSprites();
+	void initBoardCells();
 	void initSky();
 	void initGround();
+    void initChessPiecesModels();
 	void loop();
 	void drawSence();
 	void drawCells();
@@ -52,12 +53,19 @@ public:
 	void processMouseEnded(int x, int y);
 	void processMousePassiveMotion(int x, int y);
 	void processKeyBoard(unsigned key, int x, int y);
-
-	void processKeyBoard();
     
     int getSelectedIndex(int mouse_x, int mouse_y);
 
-    int prevSelected;
+    int prevSelectedChestPieceIndex;
+    
+    ExtraModel* currentSelectedCell;
+    ExtraModel*  prevSelectedCell;
+
+    Vector3 tween(Vector3 A, Vector3 B, float t);
+    float t; //tweening factor
+    int mode;
+
+    void moveChestPieceOutTheBoard(ExtraModel* boardcell);
 };
 
 #endif // !_CG_GAME_SCENE_H_

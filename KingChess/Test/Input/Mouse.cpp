@@ -2,6 +2,9 @@
 #include <GL/freeglut.h>
 #include "../Control/Camera.h"
 #include <iostream>
+#include <Windows.h>
+#include "../Constant.h"
+using namespace std;
 
 Mouse::Mouse( void )
 {
@@ -15,6 +18,7 @@ Mouse& Mouse::inst()
 	return instance;
 }
 
+
 void Mouse::processMouse( int button, int state, int x, int y )
 {
 	Camera::inst().save(x, y);
@@ -23,9 +27,41 @@ void Mouse::processMouse( int button, int state, int x, int y )
 		{
 			if(state == GLUT_DOWN){
                 
-				mouseLeftDown = true;
+				mouseLeftDown = true; 
+                
+                if(GameScene::inst().mode == MOVING)
+                    return;
+
                 int i = GameScene::inst().getSelectedIndex(x,y);
                 std::cout << "Mouse click: " << x << " " << y << " " << i << std::endl;
+
+                
+                if(i == -1){ //bam vao mot o trong
+                    if(GameScene::inst().prevSelectedCell == NULL || GameScene::inst().currentSelectedCell == NULL)
+                        return;
+
+                    int previousindex = GameScene::inst().prevSelectedChestPieceIndex;
+                    if(previousindex != -1){
+                        
+                        GameScene::inst().mode = MOVING;
+                        cout << "Mode: moving" << endl;
+                        //cout << "A: " << A.x << A.y << A.z << endl;
+                        //cout << "B: " << B.x << B.y << B.z << endl;
+                        //cout << "P: " << P.x << P.y << P.z << endl;
+                        //then set the board cell to associate with none chest piece
+                        
+                    }
+                }
+
+                else if(i > -1){//bam vao mot o da co quan co
+                     if(GameScene::inst().prevSelectedCell == NULL || GameScene::inst().currentSelectedCell == NULL)
+                        return;
+                     int previousindex = GameScene::inst().prevSelectedChestPieceIndex;
+                     if(previousindex > -1 && GameScene::inst().currentSelectedCell->associatedChessPieceIndex != previousindex){
+                         GameScene::inst().mode = FIGHT;
+                         cout << "Mode: fight" << endl;
+                     }   
+                }
 
             }
 			else if(state == GLUT_UP)
@@ -68,3 +104,4 @@ Mouse::~Mouse( void )
 {
 
 }
+
