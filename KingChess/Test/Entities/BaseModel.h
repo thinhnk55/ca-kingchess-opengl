@@ -30,6 +30,8 @@ public:
 	ExtraModel*   mShield;
 	bool      mDrawKnife;
 	bool      mDrawShield;
+    bool hasDoneFirstMove; //dung kiem tra quan tot co phai nuoc di dau tien cua no ko
+    bool transformedToQueen;
 
 	bool                mHighlight;
 	GLfloat             mHighlightColor[4];

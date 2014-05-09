@@ -13,9 +13,9 @@ class Light
 public:
 	Light()
 	{
-		setPosition(10, 10, 10, 1);
-		setAmbient(0.2, 0.2, 0.2, 1.0);
-		setDiffuse(0.2, 0.2, 0.2, 1.0);
+		setPosition(60, 60, 0, 1);
+		setAmbient(0.6, 0.6, 0.6, 0.6);
+		setDiffuse(1, 1, 1, 1);
 		setSpecular(1.0, 1.0, 1.0, 1.0);
 		glEnable(GL_LIGHT0);
 	}
@@ -84,27 +84,31 @@ public:
 	void drawLightSource(float lightAngle, float lightHeight)
 	{
 		glPushMatrix();
+
 		glDisable(GL_LIGHTING);
 		glColor3f(1.0, 1.0, 0.0);
+
 		/* Draw an arrowhead. */
 		glDisable(GL_CULL_FACE);
 		glTranslatef(_position[0], _position[1], _position[2]);
 		glRotatef(lightAngle * -180.0 / M_PI, 0, 1, 0);
 		glRotatef(atan(lightHeight/12) * 180.0 / M_PI, 0, 0, 1);
 		glBegin(GL_TRIANGLE_FAN);
-		glVertex3f(0, 0, 0);
-		glVertex3f(2, 1, 1);
-		glVertex3f(2, -1, 1);
-		glVertex3f(2, -1, -1);
-		glVertex3f(2, 1, -1);
-		glVertex3f(2, 1, 1);
+		    glVertex3f(0, 0, 0);
+		    glVertex3f(2, 1, 1);
+		    glVertex3f(2, -1, 1);
+		    glVertex3f(2, -1, -1);
+		    glVertex3f(2, 1, -1);
+		    glVertex3f(2, 1, 1);
 		glEnd();
+
 		/* Draw a white line from light direction. */
-		glColor3f(1.0, 1.0, 1.0);
+		/*glColor3f(1.0, 1.0, 1.0);
 		glBegin(GL_LINES);
-		glVertex3f(0, 0, 0);
-		glVertex3f(5, 0, 0);
-		glEnd();
+		    glVertex3f(0, 0, 0);
+		    glVertex3f(5, 0, 0);
+		glEnd();*/
+
 		glEnable(GL_CULL_FACE);
 		glEnable(GL_LIGHTING);
 		glPopMatrix();

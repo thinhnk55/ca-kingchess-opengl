@@ -18,6 +18,7 @@ Model::Model(void)
 	glEnable(GL_CULL_FACE);
 	glEnable(GL_LIGHTING);
 	glEnable(GL_LIGHT0);
+    zoomFactor = 1;
 }
 
 Model::Model( const Model* other )

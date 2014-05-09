@@ -37,6 +37,7 @@ void ExtraModel::drawModel()
 	draw();
 
 	glPopMatrix();
+    glPopMatrix();
 }
 
 

@@ -18,6 +18,8 @@
 
 #define WINDOW_WIDTH 600
 #define WINDOW_HEIGHT 600
+#include "Constant.h"
+
 using namespace std;
 
 void initGL(){
@@ -49,7 +51,7 @@ void display(){
 	glClearStencil(0x4);
 	
 	glPushMatrix();
-	glBegin(GL_LINES);
+	//glBegin(GL_LINES);
 	
 	/*for(int i = 0; i < 100; i++){
 		glColor3f(1, 0, 0);
@@ -65,7 +67,7 @@ void display(){
 	//glVertex3f(0, -100, 0);
 	//glVertex3f(0, 100, 0);
 	
-	glEnd();
+	//glEnd();
 	GameScene::inst().loop();
 	glPopMatrix();
 
@@ -103,7 +105,7 @@ void reshapeCB(int width, int height) {
 	gluLookAt(Camera::inst().eye.x, Camera::inst().eye.y, Camera::inst().eye.z,
 		Camera::inst().at.x, Camera::inst().at.y, Camera::inst().at.z,
 		0, 1, 0 );
-    cout << width << " " << height << endl;
+    //cout << width << " " << height << endl;
 }
 
 void mouseCB(int button, int stat, int x, int y){
@@ -137,7 +139,6 @@ void mousePassiveMotionCB(int x, int y){
 
 
 int main(int argc, char *argv[]){
-
 
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_RGB | GLUT_SINGLE | GLUT_STENCIL);

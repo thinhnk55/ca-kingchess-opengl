@@ -1,8 +1,5 @@
 #include "BaseModel.h"
 
-
-
-
 BaseModel::BaseModel(){
 
 	zoomFactor = 1.0;
@@ -17,10 +14,12 @@ BaseModel::BaseModel(){
 	circleAngle = 0;
 
 	mHighlight    = false;
-	mShadow       = false;
+	mShadow       = true;
 	mSelected     = false;
 	mDrawKnife    = false;
 	mDrawShield   = false;
+    hasDoneFirstMove = false;
+    transformedToQueen = false;
 
 	mHighlightThickness =  1.0;
 	mHighlightColor[0] = 0.0;
@@ -40,10 +39,10 @@ BaseModel::BaseModel(){
 BaseModel::BaseModel( const BaseModel* other )
 {
 	memcpy(this, other, sizeof(*other));
-    this->mVisible = true;
-    this->mSelected = false;
-    this->mDrawKnife = false;
-	this->mDrawShield = false;
+    //this->mVisible = true;
+    //this->mSelected = false;
+    //this->mDrawKnife = false;
+	//this->mDrawShield = false;
 }
 
 BaseModel::~BaseModel(){

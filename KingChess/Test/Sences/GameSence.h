@@ -21,6 +21,7 @@ public:
 	//Lighting
 	GLfloat lightPosition[4];
 	float lightAngle, lightHeight;
+    //Light* light;
 	Ray mViewRay;
 
 	LogicGame* logic;
