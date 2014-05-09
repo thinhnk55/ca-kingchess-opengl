@@ -29,7 +29,7 @@ void Mouse::processMouse( int button, int state, int x, int y )
                 
 				mouseLeftDown = true; 
                 
-                if(GameScene::inst().mode == MOVING)
+                if(GameScene::inst().mode == MOVING || GameScene::inst().mode == FIGHT || GameScene::inst().mode == END_GAME)
                     return;
 
                 int i = GameScene::inst().getSelectedIndex(x,y);
@@ -41,16 +41,19 @@ void Mouse::processMouse( int button, int state, int x, int y )
                         return;
 
                     int previousindex = GameScene::inst().prevSelectedChestPieceIndex;
+
                     if(previousindex != -1){
-                        
-                        GameScene::inst().mode = MOVING;
-                        cout << "Mode: moving" << endl;
-                        //cout << "A: " << A.x << A.y << A.z << endl;
-                        //cout << "B: " << B.x << B.y << B.z << endl;
-                        //cout << "P: " << P.x << P.y << P.z << endl;
-                        //then set the board cell to associate with none chest piece
-                        
+                        if(GameScene::inst().logic->isValidMoving(GameScene::inst().prevSelectedCell,GameScene::inst().currentSelectedCell)){
+                            GameScene::inst().mode = MOVING;
+                            cout << "Mode: moving" << endl;
+                        }
+                        else{
+                            GameScene::inst().currentSelectedCell = NULL;
+                            return;
+                        }
+             
                     }
+
                 }
 
                 else if(i > -1){//bam vao mot o da co quan co
@@ -58,11 +61,16 @@ void Mouse::processMouse( int button, int state, int x, int y )
                         return;
                      int previousindex = GameScene::inst().prevSelectedChestPieceIndex;
                      if(previousindex > -1 && GameScene::inst().currentSelectedCell->associatedChessPieceIndex != previousindex){
-                         GameScene::inst().mode = FIGHT;
-                         cout << "Mode: fight" << endl;
+                         if(GameScene::inst().logic->isValidMoving(GameScene::inst().prevSelectedCell,GameScene::inst().currentSelectedCell)){
+                             GameScene::inst().mode = FIGHT;
+                             cout << "Mode: fight" << endl;
+                         }
+                         else{
+                             GameScene::inst().currentSelectedCell = NULL;
+                             return;
+                         }
                      }   
                 }
-
             }
 			else if(state == GLUT_UP)
 				mouseLeftDown = false;

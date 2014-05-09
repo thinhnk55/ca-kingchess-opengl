@@ -53,10 +53,11 @@ DEFINE INDEX OF MODELS
 #define MOVING 1
 #define IDLE 0
 #define FIGHT 2
+#define END_GAME 3
 enum Turn
 {
-	BLACK, 
-	WHITE
+	RED, 
+	BLUE
 };
 
 #endif // !_CG_CONSTANTS_H_

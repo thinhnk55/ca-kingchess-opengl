@@ -1,4 +1,4 @@
-#include "GameSence.h"
+﻿#include "GameSence.h"
 #include "../Entities/LogicGame.h"
 #include "../Constant.h"
 #include "../Input/Mouse.h"
@@ -9,11 +9,13 @@ GameScene::GameScene(void)
 {
 	logic = new LogicGame();
 	yCir = -15;
+
 	lightPosition[0] = 0;
-	lightPosition[1] = 60;
-	lightPosition[2] = 0;
+	lightPosition[1] = 70;
+    lightPosition[2] = 0;
 	lightPosition[3] = 1;
-	lightAngle = 90.0;
+	//lightAngle = 90.0;
+
 	//lightHeight = 0;
 
 	initEnties();
@@ -23,6 +25,8 @@ GameScene::GameScene(void)
     prevSelectedCell = NULL;
     t = 0;
     mode = IDLE;
+    cout << "Turn: " << logic->turn << endl;
+    //light = new Light();
 }
 
 GameScene& GameScene::inst()
@@ -323,7 +327,7 @@ void GameScene::initEnties(){
 	initBoardCells();
 	
 	//initSky();
-	//initGround();
+	initGround();
 
 	
 
@@ -360,6 +364,9 @@ void GameScene::loop()
 
             t = 0;
             mode = IDLE;
+
+            logic->transformPawnToQueen(prevSelectedCell,currentSelectedCell,prevSelectedChestPieceIndex);
+
             currentSelectedCell->associatedChessPieceIndex = prevSelectedChestPieceIndex;
             prevSelectedCell->associatedChessPieceIndex = -1;
 
@@ -375,11 +382,17 @@ void GameScene::loop()
                 }
                 cout << endl;
             }
+
+            /*change turn*/
+            logic->changeTurn();
+            drawSence();
         }
     }
 
-    else if( mode == IDLE)
+    else if( mode == IDLE){
 	    drawSence();
+        
+    }
     else if (mode == FIGHT){
         //fight here
         if(t <= 1){//moving
@@ -396,18 +409,15 @@ void GameScene::loop()
 
         }
         else{
-            /*check rule*/
-                //code here
-                //bool checkRule(prevselectcell,currenselectcell)
-            /*end check rule*/
 
-            /*remove chest piece here*/
-                //if(checkrule)
-                    //move models out of board
             moveChestPieceOutTheBoard(currentSelectedCell);
-            /*end of remove chest piece code */
-            
+            //logic->changeTurn();
+            drawSence();
         }
+    }
+
+    else if(mode == END_GAME){
+        drawSence();
     }
 }
 
@@ -423,13 +433,15 @@ void GameScene::drawCells(){
 
 void GameScene::drawSence(){
 
-	float _ambient[4] = {1, 1, 1, 1};
-	glLightfv(GL_LIGHT0, GL_AMBIENT,  _ambient);
+	//float _ambient[4] = {1, 1, 1, 1};
+	//glLightfv(GL_LIGHT0, GL_AMBIENT,  _ambient);
+
 	//sky->drawModel();
 	
-	Light::inst().setAmbient();
+	//light->setAmbient();
+
 	drawCells();
-	//ground->drawModel();
+	ground->drawModel();
 	
 	board->drawModel();
 	//pawnRedTempModel->drawModel();
@@ -543,38 +555,87 @@ int GameScene::getSelectedIndex(int mousex, int mousey){
 
     bool found = false;
     int i,j;
-
-    for(i = 0 ; i < BOARD_SIZE ; i++){
-        for(j  = 0 ; j < BOARD_SIZE ; j++){
-            if(mViewRay.hasIntersected(allCells[j][i]->boundingbox())){
-                cout << j << i << endl;
-                found = true;
-                index = allCells[j][i]->associatedChessPieceIndex;
-                //currentSelectedCell = allCells[j][i];
-                break;
+    if(mode != END_GAME){
+        for(i = 0 ; i < BOARD_SIZE ; i++){
+            for(j  = 0 ; j < BOARD_SIZE ; j++){
+                if(mViewRay.hasIntersected(allCells[j][i]->boundingbox())){
+                    cout << "Selected cell: " << j << "-" << i << endl;
+                    found = true;
+                    index = allCells[j][i]->associatedChessPieceIndex;
+                    //currentSelectedCell = allCells[j][i];
+                    break;
+                }
             }
+            if(found) break;
         }
-        if(found) break;
-    }
+        /*nếu là turn red thì chỉ cho phép chọn quân 0->15*/
+        if(logic->turn == Turn::RED){
+            if(index >= 0 && index <= 15){
+                if(prevSelectedCell == NULL){
+                    prevSelectedCell = allCells[j][i];
+                    prevSelectedChestPieceIndex = index;
+                    models[index]->mDrawKnife = true;
+                }
 
-    if(index != -1){
-        if(prevSelectedCell == NULL){
-            prevSelectedCell = allCells[j][i];
-            prevSelectedChestPieceIndex = index;
-            models[index]->mDrawKnife = true;
+                else if(prevSelectedCell != NULL){
+
+                    if(index >= 0 && index <= 15){//bam vao o thu 2 cung quan red thi chuyen select sang quan nay
+                        models[prevSelectedChestPieceIndex]->mDrawKnife = false;
+                        prevSelectedCell = allCells[j][i];
+                        prevSelectedChestPieceIndex = index;
+                        models[index]->mDrawKnife = true;
+                    }
+                    
+                    else
+                        currentSelectedCell = allCells[j][i];
+                }
+                
+            }
+
+            else 
+            {
+                if(prevSelectedCell != NULL)
+                    currentSelectedCell = allCells[j][i];
+            }
+
+            if(!found) return -2; //ko bam vao o nao
+            else return index;
         }
-        else
-            currentSelectedCell = allCells[j][i];
-    }
 
-    else 
-    {
-        if(prevSelectedCell != NULL)
-            currentSelectedCell = allCells[j][i];
-    }
+        /*turn blue chọn quân 16->31 */
+        else if(logic->turn == Turn::BLUE){
+            if(index >= 16 && index <= 31){
+                if(prevSelectedCell == NULL){
+                    prevSelectedCell = allCells[j][i];
+                    prevSelectedChestPieceIndex = index;
+                    models[index]->mDrawKnife = true;
+                }
 
-    if(!found) return -2; //ko bam vao o nao
-    else return index;
+                else if(prevSelectedCell != NULL){
+
+                    if(index >= 16 && index <= 31){//bam vao o thu 2 cung quan blue thi chuyen select sang quan nay
+                        models[prevSelectedChestPieceIndex]->mDrawKnife = false;
+                        prevSelectedCell = allCells[j][i];
+                        prevSelectedChestPieceIndex = index;
+                        models[index]->mDrawKnife = true;
+                    }
+                    
+                    else
+                        currentSelectedCell = allCells[j][i];
+                }
+            }
+
+            else 
+            {
+                if(prevSelectedCell != NULL)
+                    currentSelectedCell = allCells[j][i];
+            }
+
+            if(!found) return -2; //ko bam vao o nao
+            else return index;
+        }
+    }
+    
 }
 
 GameScene::~GameScene(void)
@@ -603,7 +664,17 @@ void GameScene::moveChestPieceOutTheBoard(ExtraModel* boardcell){
         }
         else{
             t = 0;
+
+            if(boardcell->associatedChessPieceIndex == KING_RED){
+                cout << "End game!" << endl << "Winner: White" << endl;
+                mode = END_GAME;
+                drawSence();
+                return;
+            }
+
             mode = IDLE;
+            logic->transformPawnToQueen(prevSelectedCell,currentSelectedCell,prevSelectedChestPieceIndex);
+
             currentSelectedCell->associatedChessPieceIndex = prevSelectedChestPieceIndex;
             prevSelectedCell->associatedChessPieceIndex = -1;
             
@@ -618,6 +689,8 @@ void GameScene::moveChestPieceOutTheBoard(ExtraModel* boardcell){
                 }
                 cout << endl;
             }
+            logic->changeTurn();
+            drawSence();
         }
     }
     else {//quan blue thi move sang ben phai
@@ -632,7 +705,15 @@ void GameScene::moveChestPieceOutTheBoard(ExtraModel* boardcell){
         }
         else{
             t = 0;
+            if(boardcell->associatedChessPieceIndex == KING_BLUE){
+                cout << "End game!" << endl << "Winner: Black" << endl;
+                mode = END_GAME;
+                drawSence();
+                return;
+            }
             mode = IDLE;
+            logic->transformPawnToQueen(prevSelectedCell,currentSelectedCell,prevSelectedChestPieceIndex);
+
             currentSelectedCell->associatedChessPieceIndex = prevSelectedChestPieceIndex;
             prevSelectedCell->associatedChessPieceIndex = -1;
             
@@ -647,6 +728,8 @@ void GameScene::moveChestPieceOutTheBoard(ExtraModel* boardcell){
                 }
                 cout << endl;
             }
+            logic->changeTurn();
+            drawSence();
         }
     }
 }
