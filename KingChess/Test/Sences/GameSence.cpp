@@ -10,7 +10,7 @@ GameScene::GameScene(void)
 	logic = new LogicGame();
 	yCir = -15;
 
-	lightPosition[0] = 0;
+	lightPosition[0] = 70;
 	lightPosition[1] = 70;
     lightPosition[2] = 0;
 	lightPosition[3] = 1;
