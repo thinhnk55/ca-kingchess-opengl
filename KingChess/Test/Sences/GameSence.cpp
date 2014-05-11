@@ -4,14 +4,14 @@
 #include "../Input/Mouse.h"
 #include <iostream>
 using namespace std;
-
+#define BOARD_Y 28
 GameScene::GameScene(void)
 {
 	logic = new LogicGame();
 	yCir = -15;
 
-	lightPosition[0] = 70;
-	lightPosition[1] = 70;
+	lightPosition[0] = 150;
+	lightPosition[1] = 150;
     lightPosition[2] = 0;
 	lightPosition[3] = 1;
 	//lightAngle = 90.0;
@@ -43,15 +43,15 @@ void GameScene::initBoardCells(){
     for(int x = 0 ; x < BOARD_SIZE ; x++){
         allCells[x][0] = new ExtraModel(cell);
         if(x == 0){
-            allCells[x][0]->setPosition(Vector3(-44, 2, 44));
+            allCells[x][0]->setPosition(Vector3(-44, 2 + BOARD_Y, 44));
         }
         else{
             float posX,posY,posZ;
 
             if(x % 2 != 0)
-                allCells[x][0]->setPosition(Vector3(allCells[x-1][0]->getPosition().x + 13, 2, 44));
+                allCells[x][0]->setPosition(Vector3(allCells[x-1][0]->getPosition().x + 13 , 2+ BOARD_Y, 44));
             else 
-                allCells[x][0]->setPosition(Vector3(allCells[x-1][0]->getPosition().x + 12, 2, 44));
+                allCells[x][0]->setPosition(Vector3(allCells[x-1][0]->getPosition().x + 12, 2+ BOARD_Y, 44));
         }
         allCells[x][0]->boardIndexX = x;
         allCells[x][0]->boardIndexY = 0;
@@ -63,14 +63,14 @@ void GameScene::initBoardCells(){
     for(int x = 0 ; x < BOARD_SIZE ; x++){
         allCells[x][1] = new ExtraModel(cell);
         if(x == 0){
-            allCells[x][1]->setPosition(Vector3(-44, 2, 31));
+            allCells[x][1]->setPosition(Vector3(-44, 2+ BOARD_Y, 31));
         }
         else{
             float posX,posY,posZ;
             if(x % 2 != 0)
-                allCells[x][1]->setPosition(Vector3(allCells[x-1][1]->getPosition().x + 13, 2, 31));
+                allCells[x][1]->setPosition(Vector3(allCells[x-1][1]->getPosition().x + 13, 2+ BOARD_Y, 31));
             else 
-                allCells[x][1]->setPosition(Vector3(allCells[x-1][1]->getPosition().x + 12, 2, 31));
+                allCells[x][1]->setPosition(Vector3(allCells[x-1][1]->getPosition().x + 12, 2+ BOARD_Y, 31));
         }
         allCells[x][1]->boardIndexX = x;
         allCells[x][1]->boardIndexY = 1;
@@ -82,16 +82,16 @@ void GameScene::initBoardCells(){
     for(int x = 0 ; x < BOARD_SIZE ; x++){
         allCells[x][2] = new ExtraModel(cell);
         if(x == 0){
-            allCells[x][2]->setPosition(Vector3(-44, 2, 19));
+            allCells[x][2]->setPosition(Vector3(-44, 2+ BOARD_Y, 19));
         }
         else{
             float posX,posY,posZ;
 
             //cout << posX << posY << posZ << endl;
             if(x % 2 != 0)
-                allCells[x][2]->setPosition(Vector3(allCells[x-1][2]->getPosition().x + 13, 2, 19));
+                allCells[x][2]->setPosition(Vector3(allCells[x-1][2]->getPosition().x + 13, 2+ BOARD_Y, 19));
             else 
-                allCells[x][2]->setPosition(Vector3(allCells[x-1][2]->getPosition().x + 12, 2, 19));
+                allCells[x][2]->setPosition(Vector3(allCells[x-1][2]->getPosition().x + 12, 2+ BOARD_Y, 19));
         }
         allCells[x][2]->boardIndexX = x;
         allCells[x][2]->boardIndexY = 2;
@@ -101,16 +101,16 @@ void GameScene::initBoardCells(){
     for(int x = 0 ; x < BOARD_SIZE ; x++){
         allCells[x][3] = new ExtraModel(cell);
         if(x == 0){
-            allCells[x][3]->setPosition(Vector3(-44, 2, 6));
+            allCells[x][3]->setPosition(Vector3(-44, 2+ BOARD_Y, 6));
         }
         else{
             float posX,posY,posZ;
 
             //cout << posX << posY << posZ << endl;
             if(x % 2 != 0)
-                allCells[x][3]->setPosition(Vector3(allCells[x-1][3]->getPosition().x + 13, 2, 6));
+                allCells[x][3]->setPosition(Vector3(allCells[x-1][3]->getPosition().x + 13, 2+ BOARD_Y, 6));
             else 
-                allCells[x][3]->setPosition(Vector3(allCells[x-1][3]->getPosition().x + 12, 2, 6));
+                allCells[x][3]->setPosition(Vector3(allCells[x-1][3]->getPosition().x + 12, 2+ BOARD_Y, 6));
         }
         allCells[x][3]->boardIndexX = x;
         allCells[x][3]->boardIndexY = 3;
@@ -120,16 +120,16 @@ void GameScene::initBoardCells(){
     for(int x = 0 ; x < BOARD_SIZE ; x++){
         allCells[x][4] = new ExtraModel(cell);
         if(x == 0){
-            allCells[x][4]->setPosition(Vector3(-44, 2, -6));
+            allCells[x][4]->setPosition(Vector3(-44, 2+ BOARD_Y, -6));
         }
         else{
             float posX,posY,posZ;
 
             //cout << posX << posY << posZ << endl;
             if(x % 2 != 0)
-                allCells[x][4]->setPosition(Vector3(allCells[x-1][4]->getPosition().x + 13, 2, -6));
+                allCells[x][4]->setPosition(Vector3(allCells[x-1][4]->getPosition().x + 13, 2+ BOARD_Y, -6));
             else 
-                allCells[x][4]->setPosition(Vector3(allCells[x-1][4]->getPosition().x + 12, 2, -6));
+                allCells[x][4]->setPosition(Vector3(allCells[x-1][4]->getPosition().x + 12, 2+ BOARD_Y, -6));
         }
         allCells[x][4]->boardIndexX = x;
         allCells[x][4]->boardIndexY = 4;
@@ -139,16 +139,16 @@ void GameScene::initBoardCells(){
     for(int x = 0 ; x < BOARD_SIZE ; x++){
         allCells[x][5] = new ExtraModel(cell);
         if(x == 0){
-            allCells[x][5]->setPosition(Vector3(-44, 2, -19));
+            allCells[x][5]->setPosition(Vector3(-44, 2+ BOARD_Y, -19));
         }
         else{
             float posX,posY,posZ;
 
             //cout << posX << posY << posZ << endl;
             if(x % 2 != 0)
-                allCells[x][5]->setPosition(Vector3(allCells[x-1][5]->getPosition().x + 13, 2, -19));
+                allCells[x][5]->setPosition(Vector3(allCells[x-1][5]->getPosition().x + 13, 2+ BOARD_Y, -19));
             else 
-                allCells[x][5]->setPosition(Vector3(allCells[x-1][5]->getPosition().x + 12, 2, -19));
+                allCells[x][5]->setPosition(Vector3(allCells[x-1][5]->getPosition().x + 12, 2+ BOARD_Y, -19));
         }
         allCells[x][5]->boardIndexX = x;
         allCells[x][5]->boardIndexY = 5;
@@ -158,16 +158,16 @@ void GameScene::initBoardCells(){
     for(int x = 0 ; x < BOARD_SIZE ; x++){
         allCells[x][6] = new ExtraModel(cell);
         if(x == 0){
-            allCells[x][6]->setPosition(Vector3(-44, 2, -31));
+            allCells[x][6]->setPosition(Vector3(-44, 2+ BOARD_Y, -31));
         }
         else{
             float posX,posY,posZ;
 
             //cout << posX << posY << posZ << endl;
             if(x % 2 != 0)
-                allCells[x][6]->setPosition(Vector3(allCells[x-1][6]->getPosition().x + 13, 2, -31));
+                allCells[x][6]->setPosition(Vector3(allCells[x-1][6]->getPosition().x + 13, 2+ BOARD_Y, -31));
             else 
-                allCells[x][6]->setPosition(Vector3(allCells[x-1][6]->getPosition().x + 12, 2, -31));
+                allCells[x][6]->setPosition(Vector3(allCells[x-1][6]->getPosition().x + 12, 2+ BOARD_Y, -31));
         }
         allCells[x][6]->boardIndexX = x;
         allCells[x][6]->boardIndexY = 6;
@@ -179,16 +179,16 @@ void GameScene::initBoardCells(){
     for(int x = 0 ; x < BOARD_SIZE ; x++){
         allCells[x][7] = new ExtraModel(cell);
         if(x == 0){
-            allCells[x][7]->setPosition(Vector3(-44, 2, -44));
+            allCells[x][7]->setPosition(Vector3(-44, 2+ BOARD_Y, -44));
         }
         else{
             float posX,posY,posZ;
 
             //cout << posX << posY << posZ << endl;
             if(x % 2 != 0)
-                allCells[x][7]->setPosition(Vector3(allCells[x-1][7]->getPosition().x + 13, 2, -44));
+                allCells[x][7]->setPosition(Vector3(allCells[x-1][7]->getPosition().x + 13, 2+ BOARD_Y, -44));
             else 
-                allCells[x][7]->setPosition(Vector3(allCells[x-1][7]->getPosition().x + 12, 2, -44));
+                allCells[x][7]->setPosition(Vector3(allCells[x-1][7]->getPosition().x + 12, 2+ BOARD_Y, -44));
         }
         allCells[x][7]->boardIndexX = x;
         allCells[x][7]->boardIndexY = 7;
@@ -215,113 +215,111 @@ void GameScene::initChessPiecesModels(){
     
     //set red pawns positions
     models[PAWN_RED_1] = new BaseModel(pawnRedTempModel);
-    models[PAWN_RED_1]->setPosition(Vector3(-44,8,31));
+    models[PAWN_RED_1]->setPosition(Vector3(-44,7 + BOARD_Y,31));
     models[PAWN_RED_2] = new BaseModel(pawnRedTempModel);
-    models[PAWN_RED_2]->setPosition(Vector3(-31,8,31));
+    models[PAWN_RED_2]->setPosition(Vector3(-31,7  + BOARD_Y,31));
     models[PAWN_RED_3] = new BaseModel(pawnRedTempModel);
-    models[PAWN_RED_3]->setPosition(Vector3(-19,8,31));
+    models[PAWN_RED_3]->setPosition(Vector3(-19,7  + BOARD_Y,31));
     models[PAWN_RED_4] = new BaseModel(pawnRedTempModel);
-    models[PAWN_RED_4]->setPosition(Vector3(-6,8,31));
+    models[PAWN_RED_4]->setPosition(Vector3(-6,7 + BOARD_Y,31));
     models[PAWN_RED_5] = new BaseModel(pawnRedTempModel);
-    models[PAWN_RED_5]->setPosition(Vector3(6,8,31));
+    models[PAWN_RED_5]->setPosition(Vector3(6,7 + BOARD_Y,31));
     models[PAWN_RED_6] = new BaseModel(pawnRedTempModel);
-    models[PAWN_RED_6]->setPosition(Vector3(19,8,31));
+    models[PAWN_RED_6]->setPosition(Vector3(19,7 + BOARD_Y,31));
     models[PAWN_RED_7] = new BaseModel(pawnRedTempModel);
-    models[PAWN_RED_7]->setPosition(Vector3(31,8,31));
+    models[PAWN_RED_7]->setPosition(Vector3(31, 7+ BOARD_Y,31));
     models[PAWN_RED_8] = new BaseModel(pawnRedTempModel);
-    models[PAWN_RED_8]->setPosition(Vector3(44,8,31));
+    models[PAWN_RED_8]->setPosition(Vector3(44,7 + BOARD_Y,31));
 
     //set red bishops positions
     models[BISHOP_RED_1] = new BaseModel();
     models[BISHOP_RED_1]->loadModel("Models/Bishop.obj");
-    models[BISHOP_RED_1]->setPosition(Vector3(-19,9,44));
+    models[BISHOP_RED_1]->setPosition(Vector3(-19,9+ BOARD_Y,44));
     models[BISHOP_RED_2] = new BaseModel(models[BISHOP_RED_1]);
-    models[BISHOP_RED_2]->setPosition(Vector3(19,9,44));
+    models[BISHOP_RED_2]->setPosition(Vector3(19,9+ BOARD_Y,44));
 
     //set red knights positions
     models[KNIGHT_RED_1] = new BaseModel();
     models[KNIGHT_RED_1]->loadModel("Models/knight.obj");
-    models[KNIGHT_RED_1]->setPosition(Vector3(-32,9,44));
+    models[KNIGHT_RED_1]->setPosition(Vector3(-32,9+ BOARD_Y,44));
     models[KNIGHT_RED_1]->setAngleRotate(-90);
     models[KNIGHT_RED_2] = new BaseModel(models[KNIGHT_RED_1]);
-    models[KNIGHT_RED_2]->setPosition(Vector3(32,9,44));
+    models[KNIGHT_RED_2]->setPosition(Vector3(32,9+ BOARD_Y,44));
 
     //set red rooks positions
     models[ROOK_RED_1] = new BaseModel();
     models[ROOK_RED_1]->loadModel("Models/Rook.obj");
-    models[ROOK_RED_1]->setPosition(Vector3(-44,9,44));
+    models[ROOK_RED_1]->setPosition(Vector3(-44,9+ BOARD_Y,44));
     models[ROOK_RED_2] = new BaseModel(models[ROOK_RED_1]);
-    models[ROOK_RED_2]->setPosition(Vector3(44,9,44));
+    models[ROOK_RED_2]->setPosition(Vector3(44,9+ BOARD_Y,44));
 
     //set red queen positions
     models[QUEEN_RED] = new BaseModel();
     models[QUEEN_RED]->loadModel("Models/Queen.obj");
-    models[QUEEN_RED]->setPosition(Vector3(-6,9,44));
+    models[QUEEN_RED]->setPosition(Vector3(-6,9+ BOARD_Y,44));
 
     //set red king positions
     models[KING_RED] = new BaseModel();
     models[KING_RED]->loadModel("Models/King.obj");
-    models[KING_RED]->setPosition(Vector3(6,10,44));
+    models[KING_RED]->setPosition(Vector3(6,10+ BOARD_Y,44));
 
     //set blue pawns positions
     models[PAWN_BLUE_1] = new BaseModel();
     models[PAWN_BLUE_1]->loadModel("Models/PawnBlue.obj");
-    models[PAWN_BLUE_1]->setPosition(Vector3(-44,8,-31));
+    models[PAWN_BLUE_1]->setPosition(Vector3(-44,7+ BOARD_Y,-31));
     models[PAWN_BLUE_2] = new BaseModel(models[PAWN_BLUE_1]);
-    models[PAWN_BLUE_2]->setPosition(Vector3(-31,8,-31));
+    models[PAWN_BLUE_2]->setPosition(Vector3(-31,7+ BOARD_Y,-31));
     models[PAWN_BLUE_3] = new BaseModel(models[PAWN_BLUE_1]);
-    models[PAWN_BLUE_3]->setPosition(Vector3(-19,8,-31));
+    models[PAWN_BLUE_3]->setPosition(Vector3(-19,7+ BOARD_Y,-31));
     models[PAWN_BLUE_4] = new BaseModel(models[PAWN_BLUE_1]);
-    models[PAWN_BLUE_4]->setPosition(Vector3(-6,8,-31));
+    models[PAWN_BLUE_4]->setPosition(Vector3(-6,7+ BOARD_Y,-31));
     models[PAWN_BLUE_5] = new BaseModel(models[PAWN_BLUE_1]);
-    models[PAWN_BLUE_5]->setPosition(Vector3(6,8,-31));
+    models[PAWN_BLUE_5]->setPosition(Vector3(6,7+ BOARD_Y,-31));
     models[PAWN_BLUE_6] = new BaseModel(models[PAWN_BLUE_1]);
-    models[PAWN_BLUE_6]->setPosition(Vector3(19,8,-31));
+    models[PAWN_BLUE_6]->setPosition(Vector3(19,7+ BOARD_Y,-31));
     models[PAWN_BLUE_7] = new BaseModel(models[PAWN_BLUE_1]);
-    models[PAWN_BLUE_7]->setPosition(Vector3(31,8,-31));
+    models[PAWN_BLUE_7]->setPosition(Vector3(31,7+ BOARD_Y,-31));
     models[PAWN_BLUE_8] = new BaseModel(models[PAWN_BLUE_1]);
-    models[PAWN_BLUE_8]->setPosition(Vector3(44,8,-31));
+    models[PAWN_BLUE_8]->setPosition(Vector3(44,7+ BOARD_Y,-31));
 
     //set blue rooks positions
     models[ROOK_BLUE_1] = new BaseModel();
     models[ROOK_BLUE_1]->loadModel("Models/RookBlue.obj");
-    models[ROOK_BLUE_1]->setPosition(Vector3(-44,9,-44));
+    models[ROOK_BLUE_1]->setPosition(Vector3(-44,9+ BOARD_Y,-44));
     models[ROOK_BLUE_2] = new BaseModel(models[ROOK_BLUE_1]);
-    models[ROOK_BLUE_2]->setPosition(Vector3(44,9,-44));
+    models[ROOK_BLUE_2]->setPosition(Vector3(44,9+ BOARD_Y,-44));
 
     //set blue knights positions
     models[KNIGHT_BLUE_1] = new BaseModel();
     models[KNIGHT_BLUE_1]->loadModel("Models/knightBlue.obj");
-    models[KNIGHT_BLUE_1]->setPosition(Vector3(-32,9,-44));
+    models[KNIGHT_BLUE_1]->setPosition(Vector3(-32,9+ BOARD_Y,-44));
     models[KNIGHT_BLUE_1]->setAngleRotate(90);
     models[KNIGHT_BLUE_2] = new BaseModel(models[KNIGHT_BLUE_1]);
-    models[KNIGHT_BLUE_2]->setPosition(Vector3(32,9,-44));
+    models[KNIGHT_BLUE_2]->setPosition(Vector3(32,9+ BOARD_Y,-44));
 
     //set blue bishops positions
     models[BISHOP_BLUE_1] = new BaseModel();
     models[BISHOP_BLUE_1]->loadModel("Models/BishopBlue.obj");
-    models[BISHOP_BLUE_1]->setPosition(Vector3(-19,9,-44));
+    models[BISHOP_BLUE_1]->setPosition(Vector3(-19,9+ BOARD_Y,-44));
     models[BISHOP_BLUE_2] = new BaseModel(models[BISHOP_BLUE_1]);
-    models[BISHOP_BLUE_2]->setPosition(Vector3(19,9,-44));
+    models[BISHOP_BLUE_2]->setPosition(Vector3(19,9+ BOARD_Y,-44));
 
     //set blue queen positions
     models[QUEEN_BLUE] = new BaseModel();
     models[QUEEN_BLUE]->loadModel("Models/QueenBlue.obj");
-    models[QUEEN_BLUE]->setPosition(Vector3(-6,9,-44));
+    models[QUEEN_BLUE]->setPosition(Vector3(-6,9+ BOARD_Y,-44));
 
     //set blue king positions
     models[KING_BLUE] = new BaseModel();
     models[KING_BLUE]->loadModel("Models/KingBlue.obj");
-    models[KING_BLUE]->setPosition(Vector3(6,10,-44));
+    models[KING_BLUE]->setPosition(Vector3(6,10+ BOARD_Y,-44));
 }
 void GameScene::initEnties(){
 	printf("Load OBJ start \n");
 	
 	board = new BaseModel();
 	board->loadModel("Models/Board.obj");
-	board->setPosition(Vector3(0, 0, 0));
-	board->mShadow = false;
-	board->mSelected = false;
+	board->setPosition(Vector3(0, 28, 0));
 
     initChessPiecesModels();
 	initBoardCells();
@@ -341,7 +339,10 @@ void GameScene::initSky(){
 void GameScene::initGround(){
 	ground = new ExtraModel();
 	ground->loadModel("Models/ground.obj");
-	ground->setPosition(Vector3(0, 1, 0));
+	ground->setPosition(Vector3(0, -2, 0));
+    table = new ExtraModel();
+    table->loadModel("Models/table.obj");
+    table->setPosition(Vector3(0,10,0));
 }
 void GameScene::loop()
 {
@@ -442,7 +443,7 @@ void GameScene::drawSence(){
 
 	drawCells();
 	ground->drawModel();
-	
+    table->drawModel();
 	board->drawModel();
 	//pawnRedTempModel->drawModel();
 
@@ -652,11 +653,13 @@ Vector3 GameScene::tween(Vector3 A, Vector3 B, float t){
 }
 
 void GameScene::moveChestPieceOutTheBoard(ExtraModel* boardcell){
+    Vector3 B(-62,boardcell->getPosition().y ,boardcell->getPosition().z);
+    Vector3 A(models[boardcell->associatedChessPieceIndex]->getPosition().x,models[boardcell->associatedChessPieceIndex]->getPosition().y - 0.65,models[boardcell->associatedChessPieceIndex]->getPosition().z);
+    Vector3 P;
     if(boardcell->associatedChessPieceIndex < 16){//quan red thi move sang ben trai
-        Vector3 B(-65,boardcell->getPosition().y,boardcell->getPosition().z);
-        Vector3 P;
+        
         if(t <= 2){
-            P = tween(models[boardcell->associatedChessPieceIndex]->getPosition(), B, t - 1);
+            P = tween(A, B, t - 1);
             models[boardcell->associatedChessPieceIndex]->setPosition(P);
             drawSence();
             t += 0.1;
@@ -694,10 +697,9 @@ void GameScene::moveChestPieceOutTheBoard(ExtraModel* boardcell){
         }
     }
     else {//quan blue thi move sang ben phai
-        Vector3 B(65,boardcell->getPosition().y,boardcell->getPosition().z);
-        Vector3 P;
+        B.set(62,boardcell->getPosition().y ,boardcell->getPosition().z);
         if(t <= 2){
-            P = tween(models[boardcell->associatedChessPieceIndex]->getPosition(), B, t - 1);
+            P = tween(A, B, t - 1);
             models[boardcell->associatedChessPieceIndex]->setPosition(P);
             drawSence();
             t += 0.1;

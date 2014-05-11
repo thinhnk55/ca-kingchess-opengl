@@ -619,7 +619,7 @@ void LogicGame::transformPawnToQueen(ExtraModel *prevSelectedCell,ExtraModel* cu
         GameScene::inst().models[prevSelectedChestPieceIndex]->loadModel("Models/Queen.obj");
         GameScene::inst().models[prevSelectedChestPieceIndex]->transformedToQueen = true;
 
-        Vector3 tempVec(currentSelectedCell->getPosition().x,9,currentSelectedCell->getPosition().z);
+        Vector3 tempVec(currentSelectedCell->getPosition().x,9 + 28,currentSelectedCell->getPosition().z);
         GameScene::inst().models[prevSelectedChestPieceIndex]->setPosition(tempVec);
         cout << "transform to red queen" << endl;
     }
@@ -633,7 +633,7 @@ void LogicGame::transformPawnToQueen(ExtraModel *prevSelectedCell,ExtraModel* cu
         GameScene::inst().models[prevSelectedChestPieceIndex]->loadModel("Models/QueenBlue.obj");
         GameScene::inst().models[prevSelectedChestPieceIndex]->transformedToQueen = true;
 
-        Vector3 tempVec(currentSelectedCell->getPosition().x,9,currentSelectedCell->getPosition().z);
+        Vector3 tempVec(currentSelectedCell->getPosition().x,9 + 28,currentSelectedCell->getPosition().z);
         GameScene::inst().models[prevSelectedChestPieceIndex]->setPosition(tempVec);
         cout << "transform to blue queen" << endl;
     }
