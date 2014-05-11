@@ -7,7 +7,8 @@ Camera::Camera(){
 	at = Vector3(0.0,0.0,0.0);
 	up = Vector3(0.0,1.0,0.0);
 	theta = 0;
-	phi = Math::PI/2;
+	phi = Math::PI/4;
+    //phi = 0;
 	R = 175;
 	eye = transf_coord();
 	zeroViewVector = Vector2(0, 1);
