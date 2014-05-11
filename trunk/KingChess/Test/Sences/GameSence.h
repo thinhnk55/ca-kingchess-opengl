@@ -34,6 +34,7 @@ public:
     BaseModel* models[32];
 
 	BaseModel* board;
+    ExtraModel* table;
 	ExtraModel* sky;
 	ExtraModel* ground;
 

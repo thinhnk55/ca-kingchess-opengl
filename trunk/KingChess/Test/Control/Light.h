@@ -13,8 +13,8 @@ class Light
 public:
 	Light()
 	{
-		setPosition(60, 60, 0, 1);
-		setAmbient(1, 1, 1, 1);
+		//setPosition(60, 60, 0, 1);
+		setAmbient(0.5, 0.5, 0.5, 0.5);
 		setDiffuse(1, 1, 1, 1);
 		setSpecular(1.0, 1.0, 1.0, 1.0);
 		glEnable(GL_LIGHT0);
