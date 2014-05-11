@@ -1,5 +1,5 @@
 # 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
-# File Created: 10.05.2013 14:59:38
+# File Created: 11.05.2014 18:09:04
 
 newmtl _board14___Default
 	Ns 10.0000
@@ -12,8 +12,8 @@ newmtl _board14___Default
 	Kd 0.5882 0.5882 0.5882
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka Map__6_Gradient.tga
-	map_Kd Map__6_Gradient.tga
+	map_Ka F:\Work\DaiHoc\Nam3HK2\ComputerGraphics\Visual Studio\Chess\ca-kingchess-opengl\KingChess\Test\Models\Map__6_Gradient.tga
+	map_Kd F:\Work\DaiHoc\Nam3HK2\ComputerGraphics\Visual Studio\Chess\ca-kingchess-opengl\KingChess\Test\Models\Map__6_Gradient.tga
 
 newmtl _board12___Default
 	Ns 10.0000
@@ -26,5 +26,5 @@ newmtl _board12___Default
 	Kd 0.5882 0.5882 0.5882
 	Ks 0.0000 0.0000 0.0000
 	Ke 0.0000 0.0000 0.0000
-	map_Ka grass-texture-2.jpg
-	map_Kd grass-texture-2.jpg
+	map_Ka F:\Work\DaiHoc\Nam3HK2\ComputerGraphics\Visual Studio\Chess\ca-kingchess-opengl\KingChess\Test\Models\grass-texture-2.jpg
+	map_Kd F:\Work\DaiHoc\Nam3HK2\ComputerGraphics\Visual Studio\Chess\ca-kingchess-opengl\KingChess\Test\Models\grass-texture-2.jpg
